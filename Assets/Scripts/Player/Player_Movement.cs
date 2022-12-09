@@ -8,7 +8,7 @@ public class Player_Movement : MonoBehaviour
     public float dashSpeed;
 
     private float dashing = 1.0f;
-    private Rigidbody2D rigidbody;
+    private new Rigidbody2D rigidbody;
     // Start is called before the first frame update
     void Start()
     {
