@@ -9,15 +9,23 @@ public class Player_Movement : MonoBehaviour
 
     private float dashing = 1.0f;
     private new Rigidbody2D rigidbody;
+    private PlayerCollision playerCollision;
     // Start is called before the first frame update
     void Start()
     {
         rigidbody = GetComponent<Rigidbody2D>();
+        playerCollision = GetComponent<PlayerCollision>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (playerCollision.isHit) {
+            rigidbody.velocity = playerCollision.getHitDirection();
+            return;
+        }
+
+
         Vector2 dir;
         dir = Vector2.zero;
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) {

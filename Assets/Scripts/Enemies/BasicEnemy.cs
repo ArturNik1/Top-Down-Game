@@ -18,9 +18,12 @@ public class BasicEnemy : Enemy
 
     private void Move()
     {
+        if (player == null) return;
+
         float step = speed * Time.deltaTime;
         transform.position = Vector2.MoveTowards(transform.position, player.transform.position, step);
     }
+
 
 }
 

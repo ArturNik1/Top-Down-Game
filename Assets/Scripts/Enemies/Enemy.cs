@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour
     public float speed;
     [HideInInspector]
     public GameObject player;
+    public int hitAmount = 5;
 
     // Start is called before the first frame update
     protected void Start()
