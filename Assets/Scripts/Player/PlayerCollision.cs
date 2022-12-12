@@ -37,6 +37,7 @@ public class PlayerCollision : MonoBehaviour
         if (collision.transform.tag == "Enemy") {
             // push back
             isHit = true;
+            AudioManager.instance.Play("hit1");
             hitDirection = transform.position - collision.transform.position;
             hitDirection.Normalize();
             currentHitTime = 0;
