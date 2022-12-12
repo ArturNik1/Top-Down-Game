@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,8 @@ public class PlayerInfo : MonoBehaviour
 {
     [SerializeField]
     private int health = 20;
+
+    public static event Action onDeath;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +29,7 @@ public class PlayerInfo : MonoBehaviour
 
     private void Die()
     {
+        onDeath?.Invoke();
         Destroy(gameObject);
     }
 }

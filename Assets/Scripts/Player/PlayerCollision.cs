@@ -12,11 +12,12 @@ public class PlayerCollision : MonoBehaviour
     public float hitSpeed = 3;
 
     private Vector2 hitDirection;
+    private PlayerInfo playerInfo;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerInfo = GetComponent<PlayerInfo>();
     }
 
     // Update is called once per frame
@@ -39,7 +40,7 @@ public class PlayerCollision : MonoBehaviour
             hitDirection = transform.position - collision.transform.position;
             hitDirection.Normalize();
             currentHitTime = 0;
-            GetComponent<PlayerInfo>().reduceHealth(collision.transform.GetComponent<Enemy>().hitAmount);
+            playerInfo.reduceHealth(collision.transform.GetComponent<Enemy>().hitAmount);
         }
     }
 
