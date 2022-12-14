@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class BasicEnemy : Enemy
 {
+
+
     // Start is called before the first frame update
     void Start()
     {
+
+
         base.Start();
     }
 
@@ -18,6 +22,7 @@ public class BasicEnemy : Enemy
 
     private void Move()
     {
+        healthBar.SetHealth(health);
         if (player == null) return;
 
         float step = speed * Time.deltaTime;
