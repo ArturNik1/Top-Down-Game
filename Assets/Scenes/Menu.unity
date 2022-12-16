@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!95 &16185612 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 8747619860210179425, guid: 21fa40844e959da448a4eebf82651413, type: 3}
-  m_PrefabInstance: {fileID: 8747619860194534509}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &140811104
 GameObject:
   m_ObjectHideFlags: 0
@@ -407,50 +402,6 @@ PrefabInstance:
     - target: {fileID: 253925912547439421, guid: 7c53f4fe49a85084db53795811863f18, type: 3}
       propertyPath: m_Name
       value: Audio Manager
-      objectReference: {fileID: 0}
-    - target: {fileID: 253925912547439422, guid: 7c53f4fe49a85084db53795811863f18, type: 3}
-      propertyPath: sounds.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 253925912547439422, guid: 7c53f4fe49a85084db53795811863f18, type: 3}
-      propertyPath: sounds.Array.data[0].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 452a2ab5436d05446aa3815304c09160, type: 3}
-    - target: {fileID: 253925912547439422, guid: 7c53f4fe49a85084db53795811863f18, type: 3}
-      propertyPath: sounds.Array.data[0].loop
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 253925912547439422, guid: 7c53f4fe49a85084db53795811863f18, type: 3}
-      propertyPath: sounds.Array.data[0].name
-      value: background
-      objectReference: {fileID: 0}
-    - target: {fileID: 253925912547439422, guid: 7c53f4fe49a85084db53795811863f18, type: 3}
-      propertyPath: sounds.Array.data[1].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 9b0037b992b6be24391b8149b0e9be74, type: 3}
-    - target: {fileID: 253925912547439422, guid: 7c53f4fe49a85084db53795811863f18, type: 3}
-      propertyPath: sounds.Array.data[1].loop
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 253925912547439422, guid: 7c53f4fe49a85084db53795811863f18, type: 3}
-      propertyPath: sounds.Array.data[1].name
-      value: hit1
-      objectReference: {fileID: 0}
-    - target: {fileID: 253925912547439422, guid: 7c53f4fe49a85084db53795811863f18, type: 3}
-      propertyPath: sounds.Array.data[0].pitch
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 253925912547439422, guid: 7c53f4fe49a85084db53795811863f18, type: 3}
-      propertyPath: sounds.Array.data[1].pitch
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 253925912547439422, guid: 7c53f4fe49a85084db53795811863f18, type: 3}
-      propertyPath: sounds.Array.data[0].volume
-      value: 0.207
-      objectReference: {fileID: 0}
-    - target: {fileID: 253925912547439422, guid: 7c53f4fe49a85084db53795811863f18, type: 3}
-      propertyPath: sounds.Array.data[1].volume
-      value: 0.546
       objectReference: {fileID: 0}
     - target: {fileID: 253925912547439423, guid: 7c53f4fe49a85084db53795811863f18, type: 3}
       propertyPath: m_RootOrder
@@ -869,10 +820,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3178803944038827687, guid: 21fa40844e959da448a4eebf82651413, type: 3}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 16185612}
     - target: {fileID: 8747619858432679996, guid: 21fa40844e959da448a4eebf82651413, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -920,14 +867,6 @@ PrefabInstance:
     - target: {fileID: 8747619858432679997, guid: 21fa40844e959da448a4eebf82651413, type: 3}
       propertyPath: m_Name
       value: Level Manager
-      objectReference: {fileID: 0}
-    - target: {fileID: 8747619860210179424, guid: 21fa40844e959da448a4eebf82651413, type: 3}
-      propertyPath: m_Alpha
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8747619860210179424, guid: 21fa40844e959da448a4eebf82651413, type: 3}
-      propertyPath: m_IgnoreParentGroups
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21fa40844e959da448a4eebf82651413, type: 3}

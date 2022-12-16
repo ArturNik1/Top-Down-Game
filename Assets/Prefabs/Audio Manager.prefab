@@ -45,9 +45,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: 
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
+  - name: background
+    clip: {fileID: 8300000, guid: 452a2ab5436d05446aa3815304c09160, type: 3}
+    volume: 0.207
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: hit1
+    clip: {fileID: 8300000, guid: 9b0037b992b6be24391b8149b0e9be74, type: 3}
+    volume: 0.546
+    pitch: 1
     loop: 0
     source: {fileID: 0}
