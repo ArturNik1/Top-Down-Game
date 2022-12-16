@@ -350,6 +350,8 @@ GameObject:
   - component: {fileID: 254775672}
   - component: {fileID: 254775674}
   - component: {fileID: 254775673}
+  - component: {fileID: 254775676}
+  - component: {fileID: 254775675}
   m_Layer: 5
   m_Name: Game Over Panel
   m_TagString: Untagged
@@ -423,6 +425,38 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 254775671}
   m_CullTransparentMesh: 1
+--- !u!95 &254775675
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 254775671}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: acd5ff9a5e3eb0d40bfda3daaf372d24, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!225 &254775676
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 254775671}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &298758394
 GameObject:
   m_ObjectHideFlags: 0
@@ -1430,6 +1464,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverPanel: {fileID: 254775671}
+  closePanel: {fileID: 254775675}
 --- !u!1 &768656430
 GameObject:
   m_ObjectHideFlags: 0

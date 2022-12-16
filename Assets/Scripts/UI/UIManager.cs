@@ -6,6 +6,7 @@ using TMPro;
 public class UIManager : MonoBehaviour
 {
     public GameObject gameOverPanel;
+    public Animator closePanel;
 
     private PlayerStats playerStats;
     private LevelManager levelManager;
@@ -71,12 +72,12 @@ public class UIManager : MonoBehaviour
     }
 
     public void RestartRun() {
-        gameOverPanel.SetActive(false);
+        closePanel.SetTrigger("close"); 
         levelManager.LoadLevelWrapper("SampleScene");
     }
 
     public void ReturnToMenu() {
-        gameOverPanel.SetActive(false);
+        closePanel.SetTrigger("close");
         levelManager.LoadLevelWrapper("Menu");
     }
 
