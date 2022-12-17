@@ -11,6 +11,9 @@ public class UIManager : MonoBehaviour
     private PlayerStats playerStats;
     private LevelManager levelManager;
 
+    public TextMeshProUGUI itemText;
+    private int showItemText = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,12 +21,27 @@ public class UIManager : MonoBehaviour
         levelManager = GameObject.Find("Level Manager").GetComponent<LevelManager>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        if (showItemText == 1) {
+            itemText.alpha = Mathf.MoveTowards(itemText.alpha, 1.0f, 0.75f * Time.deltaTime);
+            if (itemText.alpha == 1) showItemText = 2;
+        }
+        else if (showItemText == 2) {
+            itemText.alpha = Mathf.MoveTowards(itemText.alpha, 0f, 0.5f * Time.deltaTime);
+            if (itemText.alpha == 0) showItemText = 0;
+        }
     }
 
+    #region Item Text
+    public void ShowOnScreenItemText(string text) {
+        showItemText = 1;
+        itemText.text = text;
+        itemText.alpha = 0f;
+    }
+    #endregion
+
+    #region Game Over Stuff
     private void OpenGameOverPanel()
     {
         gameOverPanel.SetActive(true);
@@ -60,6 +78,7 @@ public class UIManager : MonoBehaviour
 
         yield return null;
     }
+    #endregion
 
     private void OnEnable()
     {

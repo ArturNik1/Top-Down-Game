@@ -13,10 +13,14 @@ public class Enemy : MonoBehaviour
     private Vector2 hitDirection;
     public int hitAmount = 5;
     public HealthBar healthBar;
+
+    private PlayerStats playerStats;
+
     // Start is called before the first frame update
     protected void Start()
     {
         player = GameObject.Find("Player");
+        playerStats = player.GetComponent<PlayerStats>();
         healthBar.SetMaxHealth(health);
         rigidbody = GetComponent<Rigidbody2D>();
     }
@@ -29,6 +33,7 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(int damage) {
         health -= damage;
+        playerStats.damageDealt += damage;
         hitDirection = transform.position - player.transform.position;
         hitDirection.Normalize();
         rigidbody.velocity = hitDirection * knockbackSpeed;
@@ -41,6 +46,7 @@ public class Enemy : MonoBehaviour
     }
 
     void Die() {
+        playerStats.enemiesKilled++;
         Destroy(gameObject);
     }
 

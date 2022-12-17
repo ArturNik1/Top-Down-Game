@@ -13,11 +13,15 @@ public class PlayerCollision : MonoBehaviour
 
     private Vector2 hitDirection;
     private PlayerInfo playerInfo;
+    private PlayerStats playerStats;
+    private UIManager uiManager;
 
     // Start is called before the first frame update
     void Start()
     {
         playerInfo = GetComponent<PlayerInfo>();
+        playerStats = GetComponent<PlayerStats>();
+        uiManager = GameObject.Find("UI").GetComponent<UIManager>();
     }
 
     // Update is called once per frame
@@ -50,7 +54,12 @@ public class PlayerCollision : MonoBehaviour
     {
         if (collision.transform.tag == "Item")
         {
-            collision.transform.GetComponent<Item>().PickUpItem();
+            Item item = collision.transform.GetComponent<Item>();
+            item.PickUpItem();
+            if (item.type == ItemType.PowerUp) {
+                playerStats.powerUpsPicked++;
+                uiManager.ShowOnScreenItemText(item.pickUPText);
+            }
             Destroy(collision.gameObject);
         }
     }

@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public abstract class Item : MonoBehaviour
 {
     public ItemType type;
+    public string pickUPText;
 
     private float y_start;
 
@@ -12,7 +14,7 @@ public abstract class Item : MonoBehaviour
         y_start = transform.position.y;
     }
 
-    private void Start()
+    public void Start()
     {
         UpdateY_Start();
     }
