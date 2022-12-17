@@ -43,6 +43,16 @@ public class PlayerCollision : MonoBehaviour
             currentHitTime = 0;
             playerInfo.reduceHealth(collision.transform.GetComponent<Enemy>().hitAmount);
         }
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.transform.tag == "Item")
+        {
+            collision.transform.GetComponent<Item>().PickUpItem();
+            Destroy(collision.gameObject);
+        }
     }
 
     public Vector2 getHitDirection()
