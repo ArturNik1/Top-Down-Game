@@ -2,11 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
     public GameObject gameOverPanel;
-    public Animator closePanel;
+    
+    public GameObject escapePanel;
+    private Animator closePanel;
+    private Slider musicSlider;
+    private Slider soundSlider;
+    private Sound backgroundSound;
 
     private PlayerStats playerStats;
     private LevelManager levelManager;
@@ -17,6 +23,14 @@ public class UIManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        closePanel = GetComponent<Animator>();
+        musicSlider = closePanel.transform.GetChild(2).GetChild(2).GetComponent<Slider>();
+        soundSlider = closePanel.transform.GetChild(2).GetChild(4).GetComponent<Slider>();
+        backgroundSound = AudioManager.instance.GetSound("background");
+
+        musicSlider.value = backgroundSound.volume;
+        soundSlider.value = AudioListener.volume;
+
         playerStats = GameObject.Find("Player").GetComponent<PlayerStats>();
         levelManager = GameObject.Find("Level Manager").GetComponent<LevelManager>();
     }
@@ -31,6 +45,20 @@ public class UIManager : MonoBehaviour
             itemText.alpha = Mathf.MoveTowards(itemText.alpha, 0f, 0.5f * Time.deltaTime);
             if (itemText.alpha == 0) showItemText = 0;
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            escapePanel.SetActive(!escapePanel.activeSelf);
+        }
+
+    }
+
+    public void ChangeMusicSlider() {
+        backgroundSound.volume = musicSlider.value;
+        backgroundSound.source.volume = backgroundSound.volume;
+    }
+
+    public void ChangeSoundSlider() {
+        AudioListener.volume = soundSlider.value;
     }
 
     #region Item Text

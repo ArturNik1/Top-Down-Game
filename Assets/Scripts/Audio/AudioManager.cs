@@ -41,6 +41,15 @@ public class AudioManager : MonoBehaviour
         Play("background");
     }
 
+    public Sound GetSound(string name) {
+        int index = dict[name];
+        if (sounds[index] == null) {
+            Debug.Log("Sound " + name + " not found!");
+            return null;
+        }
+        return sounds[index];
+    }
+
     public void Play(string name)
     {
         int index = dict[name];
