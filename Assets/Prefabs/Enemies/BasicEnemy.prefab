@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8269754020047923538}
   - component: {fileID: 8269754020047923539}
   - component: {fileID: 1766017029512848846}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BasicEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -150,6 +150,7 @@ MonoBehaviour:
   health: 20
   speed: 1
   player: {fileID: 0}
+  knockbackSpeed: 5
   hitAmount: 5
   healthBar: {fileID: 6882766231071743176}
 --- !u!1001 &5250804310608633839
