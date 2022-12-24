@@ -4,13 +4,9 @@ using UnityEngine;
 
 public class BasicEnemy : Enemy
 {
-
-
     // Start is called before the first frame update
     new void Start()
     {
-
-
         base.Start();
     }
 

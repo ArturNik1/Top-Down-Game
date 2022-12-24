@@ -6,11 +6,13 @@ public class EnemySpawn : MonoBehaviour
 {
     public float defaultTimer;
     private float timer;
-    public GameObject enemy;
+    public GameObject[] enemies;
     public int enemiesCount = 0;
     public int wave = 1;
     List<GameObject> enemiesList;
-    public List<Vector2> spwanPointsList;
+    public List<Vector2> spawnPointsList;
+
+    public GameObject player;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +21,8 @@ public class EnemySpawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (player == null) return;
+
         timer -= Time.deltaTime;
         if (timer <= 0 )
         {
@@ -29,20 +33,22 @@ public class EnemySpawn : MonoBehaviour
 
     void spawn()
     {
-        List<GameObject> enemiesList = new List<GameObject>();
-        enemiesList.Add(enemy);    
+        enemiesList = new List<GameObject>();
+        foreach (GameObject enemy in enemies) { 
+            enemiesList.Add(enemy);    
+        }
         int count = 0;
-        int randomSpawnpointIndex = (int)Random.Range(0f, (float)spwanPointsList.Count);
-        Vector2 spawnPoint = spwanPointsList[randomSpawnpointIndex];
+        int randomSpawnpointIndex = (int)Random.Range(0f, (float)spawnPointsList.Count);
+        Vector2 spawnPoint = spawnPointsList[randomSpawnpointIndex];
+        if (spawnPointsList.Count == 0) return;
         Instantiate(enemiesList[Random.Range(0, enemiesList.Count)], spawnPoint, Quaternion.identity);
         count++;
     }
 
     void OnDrawGizmosSelected()
     {
-        for (int i = 0; i < spwanPointsList.Count; ++i) {
-            Gizmos.DrawWireSphere(spwanPointsList[i], 0.5f);
-
+        for (int i = 0; i < spawnPointsList.Count; ++i) {
+            Gizmos.DrawWireSphere(spawnPointsList[i], 0.5f);
         }
 
     }
