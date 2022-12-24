@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public abstract class Enemy : MonoBehaviour
 {
     public int health;
     public float speed;
@@ -45,7 +45,7 @@ public class Enemy : MonoBehaviour
            
     }
 
-    void Die() {
+    public virtual void Die() {
         playerStats.enemiesKilled++;
         Destroy(gameObject);
     }

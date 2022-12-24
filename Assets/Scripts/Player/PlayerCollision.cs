@@ -62,6 +62,12 @@ public class PlayerCollision : MonoBehaviour
             }
             Destroy(collision.gameObject);
         }
+        else if (collision.transform.tag == "Goal") {
+            GameObject.Find("Tutorial Manager").GetComponent<TutorialManager>().reachedGoal = true;
+        }
+        else if (collision.transform.tag == "Exit") { 
+            GameObject.Find("Tutorial Manager").GetComponent<TutorialManager>().canExit = true;
+        }
     }
 
     public Vector2 getHitDirection()
