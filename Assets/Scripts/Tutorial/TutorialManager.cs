@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public enum WaitScenarios { NotWaiting, AnyInput, MoveInput, DashInput, AttackInput, ToLocation, Kill, NextRoom };
+public enum WaitScenarios { NotWaiting, AnyInput, MoveInput, DashInput, AttackInput, ToLocation, Kill, PickUpItem, NextRoom };
 
 public class TutorialManager : MonoBehaviour
 {
@@ -15,6 +15,7 @@ public class TutorialManager : MonoBehaviour
     public GameObject circleGoal;
     public GameObject dummyEnemy;
     public GameObject dummyItem;
+    public GameObject wall;
 
     private WaitScenarios currentCase = WaitScenarios.NotWaiting;
     private int alphaTarget = 1;
@@ -23,11 +24,14 @@ public class TutorialManager : MonoBehaviour
     public bool reachedGoal = false;
     [HideInInspector]
     public bool killedDummy = false;
+    [HideInInspector]
+    public bool pickedUpItem = false;
+    [HideInInspector]
+    public bool canExit = false;
 
     private void Start()
     {
         StartCoroutine(HandleStartScene());
-        killedDummy = true;
     }
 
     // Update is called once per frame
@@ -55,10 +59,11 @@ public class TutorialManager : MonoBehaviour
                     }
                 }
                 else if (currentCase == WaitScenarios.AnyInput) {
-                    if (!killedDummy) healthText.enabled = false;
-                    else { 
-                        // TODO: stopped here
-                    }
+                    healthText.enabled = false;
+                }
+                else if (currentCase == WaitScenarios.PickUpItem) {
+                    //  Open the doors to the exit.
+                    wall.SetActive(false);
                 }
 
                 currentCase = WaitScenarios.NotWaiting;
@@ -93,11 +98,13 @@ public class TutorialManager : MonoBehaviour
             stopOnNextIteration = true;
         }
 
-        //  Have an on-screen message that asks the player to pickup the item, once you get there fade out the message.
-        //  Open the doors to the exit.
-        //  Have an on-screen message that asks the player exit through the door, once you get there load next scene.
+        else if (currentCase == WaitScenarios.PickUpItem && pickedUpItem) {
+            stopOnNextIteration = true;
+        }
 
-
+        else if (currentCase == WaitScenarios.NextRoom && canExit) {
+            GameObject.Find("Level Manager").GetComponent<LevelManager>().LoadLevelWrapper("SampleScene");
+        }
 
     }
 
@@ -108,7 +115,7 @@ public class TutorialManager : MonoBehaviour
             yield return new WaitForEndOfFrame();
 
         //  Have an on-screen message for movement buttons and wait for input, once you get the input fade out the message.
-/*        HandleOnScreenText("Press W A S D To Move...");
+        HandleOnScreenText("Press W A S D To Move...");
         currentCase = WaitScenarios.MoveInput;
         while (currentCase == WaitScenarios.MoveInput)
             yield return new WaitForEndOfFrame();
@@ -131,10 +138,10 @@ public class TutorialManager : MonoBehaviour
         healthText.enabled = true;
         healthBar.SetActive(true);
         while (currentCase == WaitScenarios.AnyInput)
-            yield return new WaitForEndOfFrame();*/
+            yield return new WaitForEndOfFrame();
 
         //  Have an on-screen message that asks the player to move to location X, once you get there fade out the message.
-/*        HandleOnScreenText("Move To The Highlighted Location...");
+        HandleOnScreenText("Move To The Highlighted Location...");
         currentCase = WaitScenarios.ToLocation;
         circleGoal.SetActive(true);
         while (currentCase == WaitScenarios.ToLocation)
@@ -144,7 +151,7 @@ public class TutorialManager : MonoBehaviour
         HandleOnScreenText("Attack The Enemy...");
         currentCase = WaitScenarios.Kill;
         while (currentCase == WaitScenarios.Kill)
-            yield return new WaitForEndOfFrame();*/
+            yield return new WaitForEndOfFrame();
 
         //  Have an on-screen message that asks the player to move to location X, once you get there fade out the message.
         HandleOnScreenText("Move To The Highlighted Location...");
@@ -155,12 +162,15 @@ public class TutorialManager : MonoBehaviour
 
         //  Have an on-screen message that explains about the items and weapons, wait for input and fade out the message.
         HandleOnScreenText("You Can Pickup Different Items And Weapons To Get Stronger...");
-        currentCase = WaitScenarios.AnyInput;
-        while (currentCase == WaitScenarios.AnyInput)
+        currentCase = WaitScenarios.PickUpItem;
+        while (currentCase == WaitScenarios.PickUpItem)
             yield return new WaitForEndOfFrame();
 
-
-        yield return null;
+        //  Have an on-screen message that asks the player exit through the door, once you get there load next scene.
+        HandleOnScreenText("Exit The Room To Continue...");
+        currentCase = WaitScenarios.NextRoom;
+        while (currentCase == WaitScenarios.NextRoom)
+            yield return new WaitForEndOfFrame();
     }
 
     void HandleOnScreenText(string text) {

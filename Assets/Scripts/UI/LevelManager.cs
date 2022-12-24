@@ -8,12 +8,6 @@ public class LevelManager : MonoBehaviour
     public Animator animator;
     public float transitionTime = 1f;
 
-    private void Start()
-    {
-        PlayerPrefs.SetInt("first_start", 0);
-        PlayerPrefs.Save();
-    }
-
     public void LoadLevelWrapper(string name) {
         if (!HandleFirstTimer()) 
             StartCoroutine(LoadLevel(name));
@@ -38,6 +32,11 @@ public class LevelManager : MonoBehaviour
             return true;
         }
         return false;
+    }
+
+    public void ResetPlayerPrefs() {
+        PlayerPrefs.SetInt("first_start", 0);
+        PlayerPrefs.Save();
     }
 
 }

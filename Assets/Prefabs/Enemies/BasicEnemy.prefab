@@ -164,6 +164,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyHealthBarCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 1168482854045414816, guid: 30ba12e81bb9a054a878ebb3deb43bec, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1168482854045414817, guid: 30ba12e81bb9a054a878ebb3deb43bec, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -299,6 +303,18 @@ PrefabInstance:
     - target: {fileID: 2373629938573289254, guid: 30ba12e81bb9a054a878ebb3deb43bec, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5091119708326078477, guid: 30ba12e81bb9a054a878ebb3deb43bec, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7046719286032691483, guid: 30ba12e81bb9a054a878ebb3deb43bec, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8707787877109048652, guid: 30ba12e81bb9a054a878ebb3deb43bec, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30ba12e81bb9a054a878ebb3deb43bec, type: 3}

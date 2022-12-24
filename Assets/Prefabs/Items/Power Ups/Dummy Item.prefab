@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1906164318901796950}
   - component: {fileID: 6879730142095452974}
-  - component: {fileID: -9043435659674232132}
   - component: {fileID: 4005142775989268757}
   - component: {fileID: 1661826078}
   - component: {fileID: 6551192022350740731}
   - component: {fileID: 1475402511010868247}
+  - component: {fileID: 5012993218126479420}
   m_Layer: 0
   m_Name: Dummy Item
   m_TagString: Item
@@ -89,20 +89,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-9043435659674232132
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1558717486557973487}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3ec55635c039824b927b7115fcd3d45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 1
-  pickUPText: +10% Speed
 --- !u!61 &4005142775989268757
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4929,3 +4915,17 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &5012993218126479420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1558717486557973487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56c72238f75dcbd4aaf7068b16dfef67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 1
+  pickUPText: Gained Power Up

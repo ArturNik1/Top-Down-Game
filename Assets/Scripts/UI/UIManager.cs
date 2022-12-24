@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
@@ -46,7 +47,7 @@ public class UIManager : MonoBehaviour
             if (itemText.alpha == 0) showItemText = 0;
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape)) {
+        if (Input.GetKeyDown(KeyCode.Escape) && SceneManager.GetActiveScene().name == "SampleScene") {
             escapePanel.SetActive(!escapePanel.activeSelf);
         }
 
