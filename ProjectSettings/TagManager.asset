@@ -8,6 +8,8 @@ TagManager:
   - Item
   - Goal
   - Exit
+  - Wall
+  - Enviroment
   layers:
   - Default
   - TransparentFX

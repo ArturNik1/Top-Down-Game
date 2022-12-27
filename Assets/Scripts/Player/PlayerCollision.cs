@@ -48,6 +48,17 @@ public class PlayerCollision : MonoBehaviour
             playerInfo.reduceHealth(collision.transform.GetComponent<Enemy>().hitAmount);
         }
 
+        if (collision.transform.tag == "EnemyBullet")
+        {
+            // push back
+            isHit = true;
+            AudioManager.instance.Play("hit1");
+            hitDirection = transform.position - collision.transform.position;
+            hitDirection.Normalize();
+            currentHitTime = 0;
+            playerInfo.reduceHealth(collision.transform.GetComponent<EnemyBulletMovement>().hitAmount);
+        }
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public abstract class Enemy : MonoBehaviour
 {
+    public int maxHealth;
     public int health;
     public float speed;
     [HideInInspector]
@@ -19,9 +20,10 @@ public abstract class Enemy : MonoBehaviour
     // Start is called before the first frame update
     protected void Start()
     {
+        health = maxHealth;
         player = GameObject.Find("Player");
         playerStats = player.GetComponent<PlayerStats>();
-        healthBar.SetMaxHealth(health);
+        healthBar.SetMaxHealth(maxHealth);
         rigidbody = GetComponent<Rigidbody2D>();
     }
 
