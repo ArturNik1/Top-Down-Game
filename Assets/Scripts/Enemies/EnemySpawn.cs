@@ -9,9 +9,13 @@ public class EnemySpawn : MonoBehaviour
     public GameObject[] enemies;
     public int enemiesCount = 0;
     public int wave = 1;
-    List<GameObject> enemiesList;
+    [HideInInspector]
+    public List<GameObject> enemiesList;
     public List<Vector2> spawnPointsList;
     private int count = 0;
+
+    [HideInInspector]
+    public float dropRateIncreasePercent = 0f;
 
     public GameObject player;
     // Start is called before the first frame update

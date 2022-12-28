@@ -11,7 +11,8 @@ public abstract class Enemy : MonoBehaviour
     private Vector2 hitDirection;
     private PlayerStats playerStats;
 #nullable enable
-    private ItemManager? itemManager= null;
+    private ItemManager? itemManager = null;
+    private EnemySpawn? enemySpawn = null;
 #nullable disable
 
     [Header("Health Settings")]
@@ -43,7 +44,10 @@ public abstract class Enemy : MonoBehaviour
         rigidbody = GetComponent<Rigidbody2D>();
 
         GameObject itemManagerGameobject = GameObject.Find("Item Spawn Manager");
-        if (itemManagerGameobject != null) itemManager = itemManagerGameobject.GetComponent<ItemManager>();
+        if (itemManagerGameobject != null) {
+            itemManager = itemManagerGameobject.GetComponent<ItemManager>();
+            enemySpawn = GameObject.Find("Enemy Spawner").GetComponent<EnemySpawn>();
+        }
     }
 
     // Update is called once per frame
@@ -72,7 +76,7 @@ public abstract class Enemy : MonoBehaviour
         if (itemManager == null) return;
 
         float dropResult = UnityEngine.Random.Range(0f, 100f);
-        if (dropResult <= itemDropRatePercent) {
+        if (dropResult <= itemDropRatePercent + enemySpawn.dropRateIncreasePercent) {
             float typeResult = UnityEngine.Random.Range(0f, 100f);
             if (typeResult <= distributionRate) itemManager.SpawnWeapon(transform.position);
             else itemManager.SpawnPowerUp(transform.position);

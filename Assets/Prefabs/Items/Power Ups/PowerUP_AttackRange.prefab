@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: -9043435659674232132}
   - component: {fileID: 4005142775989268757}
   - component: {fileID: 1661826078}
+  - component: {fileID: -9151548495242508766}
   m_Layer: 0
-  m_Name: PowerUp_Speed
+  m_Name: PowerUP_AttackRange
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77,7 +78,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.59168434, g: 0.9433962, b: 0.3693485, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -100,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
-  pickUPText: +10% Movement Speed
+  pickUPText: +10% Speed
 --- !u!61 &4005142775989268757
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -148,3 +149,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &-9151548495242508766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1558717486557973487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca0cc5c304dfa6f4fb8986966afb3846, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 1
+  pickUPText: Attack Range Increased

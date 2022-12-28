@@ -5,14 +5,16 @@ using UnityEngine;
 
 public class PlayerInfo : MonoBehaviour
 {
-    [SerializeField]
-    private int health = 20;
+    public int health = 20;
     public HealthBar healthBar;
+    [HideInInspector]
+    public float maxHealth;
     public static event Action onDeath;
 
     // Start is called before the first frame update
     void Start()
     {
+        maxHealth = health;
         healthBar.SetMaxHealth(health);
     }
 

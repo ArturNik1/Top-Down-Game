@@ -11,7 +11,9 @@ public class PlayerCombat : MonoBehaviour
     public float maxAttackTime = 0.5f;
     [HideInInspector]
     public float currentAttackTime = 0;
+    [HideInInspector]
     public bool isAttacking = false;
+    public int attackDamage = 5;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,7 +41,7 @@ public class PlayerCombat : MonoBehaviour
         Collider2D[] hitEnemies= Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
         foreach (Collider2D enemy in hitEnemies)
         {
-            enemy.GetComponent<Enemy>().TakeDamage(5);
+            enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
         }
     }
 
