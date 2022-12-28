@@ -147,13 +147,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44a83b830b19d8446a6e57e7bdfbdfeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   maxHealth: 20
   health: 20
+  healthBar: {fileID: 6882766231071743176}
   speed: 1
-  player: {fileID: 0}
   knockbackSpeed: 5
   hitAmount: 5
-  healthBar: {fileID: 6882766231071743176}
+  itemDropRatePercent: 50
+  distributionRate: 20
 --- !u!1001 &5250804310608633839
 PrefabInstance:
   m_ObjectHideFlags: 0

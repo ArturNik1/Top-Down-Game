@@ -147,13 +147,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67e7731ebfcda54fa8d394e0c6f5cc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   maxHealth: 10
   health: 10
+  healthBar: {fileID: 6882766231071743176}
   speed: 0.3
-  player: {fileID: 0}
   knockbackSpeed: 3
   hitAmount: 5
-  healthBar: {fileID: 6882766231071743176}
+  itemDropRatePercent: 50
+  distributionRate: 20
   bullet: {fileID: 6584385199562840874, guid: e4effec280d4ca346a0734bb4746c7f4, type: 3}
   defaultShootTime: 4
 --- !u!1001 &5250804310608633839

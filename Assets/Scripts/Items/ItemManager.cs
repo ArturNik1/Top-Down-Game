@@ -47,6 +47,24 @@ public class ItemManager : MonoBehaviour
         }
     }
 
+    public void SpawnWeapon(Vector3 position) {
+        if (weapons.Length == 0) return;
+
+        int r = UnityEngine.Random.Range(0, weapons.Length);
+        GameObject obj = Instantiate(weapons[r]);
+        obj.transform.position = position;
+        obj.transform.GetComponent<Item>().UpdateY_Start();
+    }
+
+    public void SpawnPowerUp(Vector3 position) {
+        if (powerUps.Length == 0) return;
+
+        int r = UnityEngine.Random.Range(0, powerUps.Length);
+        GameObject obj = Instantiate(powerUps[r]);
+        obj.transform.position = position;
+        obj.transform.GetComponent<Item>().UpdateY_Start();
+    }
+
     private void ShuffleArray<T>(T[] arr) {
         for (int i = 0; i < arr.Length; i++)
         {

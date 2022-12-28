@@ -4928,12 +4928,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b076fa4581acb0d439f11b281a4fd8e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
-  speed: 0
   player: {fileID: 0}
+  maxHealth: 20
+  health: 20
+  healthBar: {fileID: 6882766231071743176}
+  speed: 0
   knockbackSpeed: 0
   hitAmount: 0
-  healthBar: {fileID: 6882766231071743176}
+  itemDropRatePercent: 0
+  distributionRate: 0
 --- !u!1001 &5250804310608633839
 PrefabInstance:
   m_ObjectHideFlags: 0

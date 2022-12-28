@@ -11,11 +11,17 @@ public class EnemySpawn : MonoBehaviour
     public int wave = 1;
     List<GameObject> enemiesList;
     public List<Vector2> spawnPointsList;
+    private int count = 0;
 
     public GameObject player;
     // Start is called before the first frame update
     void Start()
     {
+        enemiesList = new List<GameObject>();
+        foreach (GameObject enemy in enemies)
+        {
+            enemiesList.Add(enemy);
+        }
     }
 
     // Update is called once per frame
@@ -26,18 +32,13 @@ public class EnemySpawn : MonoBehaviour
         timer -= Time.deltaTime;
         if (timer <= 0 )
         {
-            spawn();
+            Spawn();
             timer = defaultTimer;
         }
     }
 
-    void spawn()
+    void Spawn()
     {
-        enemiesList = new List<GameObject>();
-        foreach (GameObject enemy in enemies) { 
-            enemiesList.Add(enemy);    
-        }
-        int count = 0;
         int randomSpawnpointIndex = (int)Random.Range(0f, (float)spawnPointsList.Count);
         Vector2 spawnPoint = spawnPointsList[randomSpawnpointIndex];
         if (spawnPointsList.Count == 0) return;
