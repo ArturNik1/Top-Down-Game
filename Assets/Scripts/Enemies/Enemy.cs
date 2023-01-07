@@ -7,7 +7,8 @@ public abstract class Enemy : MonoBehaviour
 {
     [HideInInspector]
     public GameObject player;
-    private new Rigidbody2D rigidbody;
+    [HideInInspector]
+    public new Rigidbody2D rigidbody;
     private Vector2 hitDirection;
     private PlayerStats playerStats;
 #nullable enable
@@ -51,9 +52,9 @@ public abstract class Enemy : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public virtual void Update()
     {
-       
+        healthBar.SetHealth(health);
     }
 
     public void TakeDamage(int damage) {
@@ -82,6 +83,8 @@ public abstract class Enemy : MonoBehaviour
             else itemManager.SpawnPowerUp(transform.position);
         }
     }
+
+    public abstract void Move();
 
     public virtual void Die() {
         playerStats.enemiesKilled++;

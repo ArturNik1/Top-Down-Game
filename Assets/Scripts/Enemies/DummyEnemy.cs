@@ -5,15 +5,20 @@ using UnityEngine;
 public class DummyEnemy : Enemy
 {
     // Start is called before the first frame update
-    void Start()
+    new void Start()
     {
         base.Start();
     }
 
     // Update is called once per frame
-    void Update()
+    public override void Update()
     {
-        healthBar.SetHealth(health);
+        base.Update();
+    }
+
+    public override void Move()
+    {
+
     }
 
     public override void Die()

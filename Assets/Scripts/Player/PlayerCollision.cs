@@ -76,7 +76,7 @@ public class PlayerCollision : MonoBehaviour
         else if (collision.transform.tag == "Goal") {
             GameObject.Find("Tutorial Manager").GetComponent<TutorialManager>().reachedGoal = true;
         }
-        else if (collision.transform.tag == "Exit") { 
+        else if (collision.transform.tag == "Exit") {
             GameObject.Find("Tutorial Manager").GetComponent<TutorialManager>().canExit = true;
         }
     }
@@ -84,6 +84,14 @@ public class PlayerCollision : MonoBehaviour
     public Vector2 getHitDirection()
     {
         return hitDirection * hitSpeed;
+    }
+
+    public void HitByExplosion(ExplodingEnemy explodingEnemy) {
+        isHit = true;
+        AudioManager.instance.Play("hit1");
+        currentHitTime = 0;
+        playerInfo.reduceHealth(explodingEnemy.explodeDamage);
+
     }
 
 }

@@ -9,15 +9,16 @@ public class ShootingEnemy : Enemy
     private float shootTime;
 
     // Start is called before the first frame update
-    void Start()
+    new void Start()
     {
         shootTime = defaultShootTime;
         base.Start();
     }
 
     // Update is called once per frame
-    void Update()
+    public override void Update()
     {
+        base.Update();
         Move();
         
         shootTime -= Time.deltaTime;
@@ -39,9 +40,8 @@ public class ShootingEnemy : Enemy
         Physics2D.IgnoreCollision(bullet_obj.transform.GetComponent<Collider2D>(), GetComponent<Collider2D>());
     }
 
-    private void Move()
+    public override void Move()
     {
-        healthBar.SetHealth(health);
         if (player == null) return;
 
         float step = speed * Time.deltaTime;

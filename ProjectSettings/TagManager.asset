@@ -10,6 +10,7 @@ TagManager:
   - Exit
   - Wall
   - Enviroment
+  - EnemyBullet
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - Water
   - UI
   - Enemies
-  - 
+  - Player
   - 
   - 
   - 

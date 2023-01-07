@@ -2089,10 +2089,15 @@ MonoBehaviour:
   enemies:
   - {fileID: 8269754020047923536, guid: 4dd4e4780d0905949a16478c61be2524, type: 3}
   - {fileID: 8269754020047923536, guid: 4dd4e4780d0905949a16478c61be2524, type: 3}
-  - {fileID: 8269754020047923536, guid: 4dd4e4780d0905949a16478c61be2524, type: 3}
   - {fileID: 8269754020047923536, guid: 88df2d6c204f4554998080fa544136d1, type: 3}
+  - {fileID: 8269754020047923536, guid: 353c6da7f2a1403438af659f0d74dc08, type: 3}
+  - {fileID: 8269754020047923536, guid: dee7e54a28496da469f50f710f541564, type: 3}
+  - {fileID: 8269754020047923536, guid: dee7e54a28496da469f50f710f541564, type: 3}
+  - {fileID: 8269754020047923536, guid: dee7e54a28496da469f50f710f541564, type: 3}
+  - {fileID: 8269754020047923536, guid: dee7e54a28496da469f50f710f541564, type: 3}
   enemiesCount: 0
   wave: 1
+  enemiesList: []
   spawnPointsList:
   - {x: -10.7, y: -2.89}
   - {x: -6.19, y: -4.65}
@@ -2105,6 +2110,7 @@ MonoBehaviour:
   - {x: -10, y: -4.62}
   - {x: 10, y: -4.62}
   - {x: 10, y: 3.62}
+  dropRateIncreasePercent: 0
   player: {fileID: 2146168495}
 --- !u!4 &486374999
 Transform:
@@ -5314,7 +5320,7 @@ GameObject:
   - component: {fileID: 2146168504}
   - component: {fileID: 2146168505}
   - component: {fileID: 2146168500}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -5494,6 +5500,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 20
   healthBar: {fileID: 405981295}
+  maxHealth: 0
 --- !u!114 &2146168504
 MonoBehaviour:
   m_ObjectHideFlags: 0

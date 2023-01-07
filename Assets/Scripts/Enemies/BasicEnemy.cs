@@ -11,14 +11,14 @@ public class BasicEnemy : Enemy
     }
 
     // Update is called once per frame
-    void Update()
+    public override void Update()
     {
+        base.Update();
         Move();
     }
 
-    private void Move()
+    public override void Move()
     {
-        healthBar.SetHealth(health);
         if (player == null) return;
 
         float step = speed * Time.deltaTime;
