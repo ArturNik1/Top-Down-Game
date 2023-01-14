@@ -34,12 +34,17 @@ public abstract class Enemy : MonoBehaviour
     [Header("Distribution Between Weapons And PowerUps\n(Example: 70 is 70% power up, 30 % weapon)")]
     [Range(0.0f, 100f)]
     public float distributionRate = 50f;
+    [HideInInspector]
+    public GameObject waveManager;
+    private WaveManagerScript waveManagerScript;
 
     // Start is called before the first frame update
     protected void Start()
     {
         health = maxHealth;
         player = GameObject.Find("Player");
+        waveManager = GameObject.FindGameObjectWithTag("WaveManager");
+        waveManagerScript = waveManager.GetComponent<WaveManagerScript>();
         playerStats = player.GetComponent<PlayerStats>();
         healthBar.SetMaxHealth(maxHealth);
         rigidbody = GetComponent<Rigidbody2D>();
@@ -88,6 +93,7 @@ public abstract class Enemy : MonoBehaviour
 
     public virtual void Die() {
         playerStats.enemiesKilled++;
+        waveManagerScript.EnemyDied();
         Destroy(gameObject);
     }
 

@@ -36,12 +36,12 @@ public class EnemySpawn : MonoBehaviour
         timer -= Time.deltaTime;
         if (timer <= 0 )
         {
-            Spawn();
+           // Spawn();
             timer = defaultTimer;
         }
     }
 
-    void Spawn()
+    public void Spawn()
     {
         int randomSpawnpointIndex = (int)Random.Range(0f, (float)spawnPointsList.Count);
         Vector2 spawnPoint = spawnPointsList[randomSpawnpointIndex];
