@@ -8,7 +8,6 @@ public class EnemySpawn : MonoBehaviour
     private float timer;
     public GameObject[] enemies;
     public int enemiesCount = 0;
-    public int wave = 1;
     [HideInInspector]
     public List<GameObject> enemiesList;
     public List<Vector2> spawnPointsList;
@@ -41,12 +40,18 @@ public class EnemySpawn : MonoBehaviour
         }
     }
 
-    public void Spawn()
+    public void Spawn(int currentWave)
     {
         int randomSpawnpointIndex = (int)Random.Range(0f, (float)spawnPointsList.Count);
         Vector2 spawnPoint = spawnPointsList[randomSpawnpointIndex];
+        while (Vector2.Distance(spawnPoint, player.transform.position) < 3f) {
+            randomSpawnpointIndex = (int)Random.Range(0f, (float)spawnPointsList.Count);
+            spawnPoint = spawnPointsList[randomSpawnpointIndex];
+        }
         if (spawnPointsList.Count == 0) return;
-        Instantiate(enemiesList[Random.Range(0, enemiesList.Count)], spawnPoint, Quaternion.identity);
+        int upTo = (currentWave == 1) ? 1 : (currentWave <= 3) ? 2 : (currentWave <= 6) ? 3 : enemiesList.Count;  
+        GameObject enemyObject = Instantiate(enemiesList[Random.Range(0, upTo)], spawnPoint, Quaternion.identity);
+        enemyObject.GetComponent<Enemy>().UpdateStats(currentWave);
         count++;
     }
 

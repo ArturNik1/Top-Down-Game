@@ -11,7 +11,7 @@ public class ChargingEnemy : Enemy
     private float walkingTime;
     private float currentWalkingTime = 0;
 
-    public float chargeSpeed = 3f;
+    public float chargeSpeed = 7.5f;
     public float chargeForwardTime;
     private float currentChargeForwardTime = 0;
     private Vector2 chargeDirection;

@@ -157,8 +157,9 @@ MonoBehaviour:
   hitAmount: 5
   itemDropRatePercent: 10
   distributionRate: 50
+  waveManager: {fileID: 0}
   walkingTimeRange: {x: 4, y: 10}
-  chargeSpeed: 3
+  chargeSpeed: 7.5
   chargeForwardTime: 1
 --- !u!1001 &5250804310608633839
 PrefabInstance:

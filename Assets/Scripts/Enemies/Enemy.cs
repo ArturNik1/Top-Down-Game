@@ -44,7 +44,7 @@ public abstract class Enemy : MonoBehaviour
         health = maxHealth;
         player = GameObject.Find("Player");
         waveManager = GameObject.FindGameObjectWithTag("WaveManager");
-        waveManagerScript = waveManager.GetComponent<WaveManagerScript>();
+        waveManagerScript = waveManager != null ? waveManager.GetComponent<WaveManagerScript>() : null;
         playerStats = player.GetComponent<PlayerStats>();
         healthBar.SetMaxHealth(maxHealth);
         rigidbody = GetComponent<Rigidbody2D>();
@@ -95,6 +95,13 @@ public abstract class Enemy : MonoBehaviour
         playerStats.enemiesKilled++;
         waveManagerScript.EnemyDied();
         Destroy(gameObject);
+    }
+
+    public void UpdateStats(int currentWave)
+    {
+        maxHealth += Mathf.FloorToInt(0.045f * currentWave * maxHealth);
+        health = maxHealth;
+        hitAmount += Mathf.FloorToInt(0.075f * currentWave * hitAmount);
     }
 
 }

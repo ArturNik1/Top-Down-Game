@@ -23,7 +23,8 @@ public class DummyEnemy : Enemy
 
     public override void Die()
     {
+        player.GetComponent<PlayerStats>().enemiesKilled++;
         GameObject.Find("Tutorial Manager").GetComponent<TutorialManager>().killedDummy = true;
-        base.Die();
+        Destroy(gameObject);
     }
 }

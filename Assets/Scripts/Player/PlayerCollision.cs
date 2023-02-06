@@ -90,7 +90,7 @@ public class PlayerCollision : MonoBehaviour
         isHit = true;
         AudioManager.instance.Play("hit1");
         currentHitTime = 0;
-        playerInfo.reduceHealth(explodingEnemy.explodeDamage);
+        playerInfo.reduceHealth(explodingEnemy.hitAmount);
 
     }
 

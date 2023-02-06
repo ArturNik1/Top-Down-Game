@@ -8,7 +8,6 @@ public class ExplodingEnemy : Enemy
     private float currentExplodeTime;
 
     public float explodeRadius = 1;
-    public int explodeDamage = 5;
 
     private bool exploded = false;
 
