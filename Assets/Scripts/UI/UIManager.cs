@@ -7,8 +7,10 @@ using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
-    public GameObject gameOverPanel;
+    public GameObject wavePanel;
     
+    public GameObject gameOverPanel;
+
     public GameObject escapePanel;
     private Animator closePanel;
     private Slider musicSlider;
@@ -73,6 +75,7 @@ public class UIManager : MonoBehaviour
     #region Game Over Stuff
     private void OpenGameOverPanel()
     {
+        wavePanel.SetActive(false);
         gameOverPanel.SetActive(true);
         StartCoroutine(WriteText());
     }
