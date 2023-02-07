@@ -14,17 +14,24 @@ public class PlayerCombat : MonoBehaviour
     [HideInInspector]
     public bool isAttacking = false;
     public int attackDamage = 5;
+
+    private PlayerStats playerStats;
     // Start is called before the first frame update
     void Start()
     {
         playerMovement = GetComponent<Player_Movement>();
+        playerStats = GetComponent<PlayerStats>();
     }
 
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space) && !isAttacking) {
-            MeleeAttack();
+            if (MeleeAttack())
+            {
+                // if hit something, update combo
+                playerStats.UpdateCombo();
+            }
             //playerMovement.MeleeAttackMovement();
             isAttacking = true;
         }
@@ -37,12 +44,13 @@ public class PlayerCombat : MonoBehaviour
         }
     }
 
-    void MeleeAttack() {
+    bool MeleeAttack() {
         Collider2D[] hitEnemies= Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
         foreach (Collider2D enemy in hitEnemies)
         {
             enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
         }
+        return hitEnemies.Length > 0;
     }
 
     void OnDrawGizmosSelected() {

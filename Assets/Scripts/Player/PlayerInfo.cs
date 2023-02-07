@@ -11,9 +11,12 @@ public class PlayerInfo : MonoBehaviour
     public float maxHealth;
     public static event Action onDeath;
 
+    private PlayerStats playerStats;
+
     // Start is called before the first frame update
     void Start()
     {
+        playerStats = GetComponent<PlayerStats>();
         maxHealth = health;
         healthBar.SetMaxHealth(health);
     }
@@ -26,6 +29,7 @@ public class PlayerInfo : MonoBehaviour
 
     public void reduceHealth(int amount)
     {
+        playerStats.ResetComboBar();
         health -= amount;
         healthBar.SetHealth(health);
     }

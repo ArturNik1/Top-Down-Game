@@ -82,19 +82,22 @@ public class UIManager : MonoBehaviour
 
     IEnumerator WriteText() {
         TextMeshProUGUI[] children = gameOverPanel.transform.GetComponentsInChildren<TextMeshProUGUI>(true);
+        playerStats.CalculateScore();
 
         // Update text according to stats...
+        // Score
+        children[1].text += playerStats.score + " x " + playerStats.highestMultiplier + " = " + (playerStats.score * playerStats.highestMultiplier);
         // Wave
-        children[1].text += playerStats.wave;
+        children[2].text += playerStats.wave;
         // Run Time
         int minutes = Mathf.FloorToInt(playerStats.runTime / 60f);
-        children[2].text += string.Format("{0:00}:{1:00}", minutes, Mathf.FloorToInt(playerStats.runTime - minutes * 60));
+        children[3].text += string.Format("{0:00}:{1:00}", minutes, Mathf.FloorToInt(playerStats.runTime - minutes * 60));
         // Damage Dealt
-        children[3].text += playerStats.damageDealt;
+        children[4].text += playerStats.damageDealt;
         // Enemies Killed
-        children[4].text += playerStats.enemiesKilled;
+        children[5].text += playerStats.enemiesKilled;
         // Power Ups
-        children[5].text += playerStats.powerUpsPicked;
+        children[6].text += playerStats.powerUpsPicked;
 
         // Write text on screen...
         for (int i = 0; i < children.Length - 2; i++) {
