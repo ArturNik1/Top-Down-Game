@@ -1,15 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class MainMenuManager : MonoBehaviour
 {
     public GameObject settingsPanel;
-    public Animator settingsAnimator;
+    public Animator animator;
     public TextMeshProUGUI highscoreText;
     public TextMeshProUGUI coinsText;
+    public GameObject creditsPanel;
+    public AnimatorController settingsController;
+    public AnimatorController creditsController;
 
     public Slider musicSlider;
     public Slider soundSlider;
@@ -35,15 +39,20 @@ public class MainMenuManager : MonoBehaviour
 
     public void EnableTriggerOpen()
     {
-        settingsAnimator.SetTrigger("open");
+        animator.SetTrigger("open");
     }
 
 
     public void EnableTriggerClose() {
-        settingsAnimator.SetTrigger("close");
+        animator.SetTrigger("close");
     }
 
     public void ChangeSettingsPanelState() {
         settingsPanel.SetActive(!settingsPanel.activeSelf);   
     }
+
+    public void ChangeCreditsPanelState() {
+        creditsPanel.SetActive(!creditsPanel.activeSelf);
+    }
+
 }

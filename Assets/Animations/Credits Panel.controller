@@ -28,7 +28,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Settings Panel
+  m_Name: Credits Panel
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: close
@@ -106,7 +106,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SettingsPanel_Open
+  m_Name: CreditsPanel_Open
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -120,7 +120,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 081d867cf2bb4df479a78257004aa348, type: 2}
+  m_Motion: {fileID: 7400000, guid: a8307d938c033ae42a6ca768094f70eb, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -133,7 +133,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SettingsPanel_Close
+  m_Name: CreditsPanel_Close
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -147,7 +147,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: b1034b58a3e47de43a51a7019bdbda91, type: 2}
+  m_Motion: {fileID: 7400000, guid: fe0dcf4dee789bb458fe759020a4ef7f, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
