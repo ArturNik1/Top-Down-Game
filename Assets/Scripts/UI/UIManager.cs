@@ -83,6 +83,7 @@ public class UIManager : MonoBehaviour
     IEnumerator WriteText() {
         TextMeshProUGUI[] children = gameOverPanel.transform.GetComponentsInChildren<TextMeshProUGUI>(true);
         playerStats.CalculateScore();
+        playerStats.UpdateAchievementsStats();
 
         // Update text according to stats...
         // Score

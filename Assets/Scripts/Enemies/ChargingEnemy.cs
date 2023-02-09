@@ -93,4 +93,10 @@ public class ChargingEnemy : Enemy
         }
     }
 
+    public override void Die()
+    {
+        playerStats.killedCharging++;
+        base.Die();
+    }
+
 }

@@ -10,7 +10,8 @@ public abstract class Enemy : MonoBehaviour
     [HideInInspector]
     public new Rigidbody2D rigidbody;
     private Vector2 hitDirection;
-    private PlayerStats playerStats;
+    [HideInInspector]
+    public PlayerStats playerStats;
 #nullable enable
     private ItemManager? itemManager = null;
     private EnemySpawn? enemySpawn = null;

@@ -48,4 +48,10 @@ public class ShootingEnemy : Enemy
         transform.position = Vector2.MoveTowards(transform.position, player.transform.position, step);
     }
 
+    public override void Die()
+    {
+        playerStats.killedShooting++;
+        base.Die();
+    }
+
 }

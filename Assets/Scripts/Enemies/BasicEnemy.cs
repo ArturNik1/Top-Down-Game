@@ -25,6 +25,11 @@ public class BasicEnemy : Enemy
         transform.position = Vector2.MoveTowards(transform.position, player.transform.position, step);
     }
 
+    public override void Die()
+    {
+        playerStats.killedBasic++;
+        base.Die();
+    }
 
 }
 

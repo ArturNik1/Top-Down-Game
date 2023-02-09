@@ -12,8 +12,7 @@ public class MainMenuManager : MonoBehaviour
     public TextMeshProUGUI highscoreText;
     public TextMeshProUGUI coinsText;
     public GameObject creditsPanel;
-    public AnimatorController settingsController;
-    public AnimatorController creditsController;
+    public GameObject achievementsPanel;
 
     public Slider musicSlider;
     public Slider soundSlider;
@@ -42,7 +41,6 @@ public class MainMenuManager : MonoBehaviour
         animator.SetTrigger("open");
     }
 
-
     public void EnableTriggerClose() {
         animator.SetTrigger("close");
     }
@@ -55,4 +53,7 @@ public class MainMenuManager : MonoBehaviour
         creditsPanel.SetActive(!creditsPanel.activeSelf);
     }
 
+    public void ChangeAchievementsPanelState() {
+        achievementsPanel.SetActive(!achievementsPanel.activeSelf);
+    }
 }

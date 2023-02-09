@@ -68,4 +68,9 @@ public class ExplodingEnemy : Enemy
         Die();
     }
 
+    public override void Die()
+    {
+        playerStats.killedExploding++;
+        base.Die();
+    }
 }

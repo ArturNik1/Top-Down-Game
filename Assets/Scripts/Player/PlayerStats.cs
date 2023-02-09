@@ -1,5 +1,7 @@
+using Newtonsoft.Json;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
@@ -15,15 +17,14 @@ public class PlayerStats : MonoBehaviour
     public int multiplier = 1;
     public int score = 0;
 
+    // for achievmenets...
+    public int killedBasic = 0;
+    public int killedShooting = 0;
+    public int killedCharging = 0;
+    public int killedExploding = 0;
+
     public ComboBar comboBar;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         runTime += Time.deltaTime;   
@@ -57,4 +58,31 @@ public class PlayerStats : MonoBehaviour
             if (multiplier > highestMultiplier) comboBar.UpdateHighestText(multiplier);
         }
     }
+
+
+    public void UpdateAchievementsStats()
+    {
+        // do this and then do saving of stats.
+        string filePath = Application.dataPath + "/Resources/achievements.json";
+        string json = File.ReadAllText(filePath);
+        Dictionary<string, Achievement> achievements = JsonConvert.DeserializeObject<Dictionary<string, Achievement>>(json);
+
+        // update stats here...
+
+        achievements["Kill Basic Enemies"].currentValue += killedBasic;
+        achievements["Kill Shooting Enemies"].currentValue += killedShooting;
+        achievements["Kill Charging Enemies"].currentValue += killedCharging;
+        achievements["Kill Exploding Enemies"].currentValue += killedExploding;
+        achievements["Kill Enemies"].currentValue += enemiesKilled;
+        achievements["Survive"].currentValue += Mathf.FloorToInt(runTime);
+        achievements["Pick Up Items"].currentValue += powerUpsPicked;
+        achievements["Reach Score"].currentValue += score;
+
+        ///
+
+        string jsonNew = JsonConvert.SerializeObject(achievements, Formatting.Indented);
+        File.WriteAllText(filePath, jsonNew);
+
+    }
+
 }

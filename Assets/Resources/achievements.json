@@ -1,0 +1,99 @@
+{
+  "Kill Basic Enemies": {
+    "achievementName": "Kill Basic Enemies",
+    "currentValue": 5,
+    "currentStar": 1,
+    "targets": [
+      5,
+      25,
+      100,
+      500,
+      1000
+    ]
+  },
+  "Kill Shooting Enemies": {
+    "achievementName": "Kill Shooting Enemies",
+    "currentValue": 50000,
+    "currentStar": 5,
+    "targets": [
+      5,
+      25,
+      100,
+      500,
+      1000
+    ]
+  },
+  "Kill Charging Enemies": {
+    "achievementName": "Kill Charging Enemies",
+    "currentValue": 3,
+    "currentStar": 0,
+    "targets": [
+      5,
+      25,
+      100,
+      500,
+      1000
+    ]
+  },
+  "Kill Exploding Enemies": {
+    "achievementName": "Kill Exploding Enemies",
+    "currentValue": 0,
+    "currentStar": 0,
+    "targets": [
+      5,
+      25,
+      100,
+      500,
+      1000
+    ]
+  },
+  "Kill Enemies": {
+    "achievementName": "Kill Enemies",
+    "currentValue": 18,
+    "currentStar": 0,
+    "targets": [
+      25,
+      100,
+      500,
+      1000,
+      10000
+    ]
+  },
+  "Survive": {
+    "achievementName": "Survive",
+    "currentValue": 84,
+    "currentStar": 3,
+    "targets": [
+      15,
+      30,
+      60,
+      180,
+      360,
+      600
+    ]
+  },
+  "Pick Up Items": {
+    "achievementName": "Pick Up Items",
+    "currentValue": 12,
+    "currentStar": 1,
+    "targets": [
+      5,
+      25,
+      50,
+      100,
+      500
+    ]
+  },
+  "Reach Score": {
+    "achievementName": "Reach Score",
+    "currentValue": 114,
+    "currentStar": 1,
+    "targets": [
+      50,
+      200,
+      500,
+      1000,
+      5000
+    ]
+  }
+}
