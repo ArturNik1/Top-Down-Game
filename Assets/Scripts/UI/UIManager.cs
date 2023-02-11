@@ -12,6 +12,9 @@ public class UIManager : MonoBehaviour
     
     public GameObject gameOverPanel;
 
+    public GameObject wavePrizePanel;
+    private bool dontShowWavePanel = false;
+
     public GameObject escapePanel;
     private Animator closePanel;
     private Slider musicSlider;
@@ -20,7 +23,6 @@ public class UIManager : MonoBehaviour
 
     private PlayerStats playerStats;
     private LevelManager levelManager;
-    private EnemySpawn enemySpawn;
 
     public TextMeshProUGUI itemText;
     private int showItemText = 0;
@@ -41,7 +43,6 @@ public class UIManager : MonoBehaviour
 
         playerStats = GameObject.Find("Player").GetComponent<PlayerStats>();
         levelManager = GameObject.Find("Level Manager").GetComponent<LevelManager>();
-        enemySpawn = GameObject.Find("Enemy Spawner").GetComponent<EnemySpawn>();
     }
 
     private void Update()
@@ -55,13 +56,11 @@ public class UIManager : MonoBehaviour
             if (itemText.alpha == 0) showItemText = 0;
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape) && SceneManager.GetActiveScene().name == "SampleScene" && !gameOverPanel.activeSelf) {
+        if (Input.GetKeyDown(KeyCode.Escape) && SceneManager.GetActiveScene().name == "SampleScene" && !gameOverPanel.activeSelf && !wavePrizePanel.activeSelf) {
             escapePanel.SetActive(!escapePanel.activeSelf);
             
             if (escapePanel.activeSelf) onPause.Invoke();
             else onUnpause.Invoke();
-
-            // pause enemy movement(V) + wave timer + shooting(V) + item movement
         }
 
     }
@@ -125,6 +124,34 @@ public class UIManager : MonoBehaviour
 
         yield return null;
     }
+    #endregion
+
+    #region Wave Prize Panel Stuff
+
+    public void OpenWavePrizePanel() {
+        if (dontShowWavePanel) {
+            GetRandomPrize();
+            return;
+        }
+        onPause.Invoke();
+        wavePrizePanel.SetActive(true);
+    }
+
+    public void CloseWavePrizePanel() {
+        onUnpause.Invoke();
+        wavePrizePanel.SetActive(false);
+    }
+
+    public void DontShowWavePanel() {
+        dontShowWavePanel = true;
+        GetRandomPrize();
+        CloseWavePrizePanel();
+    }
+
+    public void GetRandomPrize() { 
+        // TODO
+    }
+
     #endregion
 
     private void OnEnable()

@@ -25,12 +25,14 @@ public class WaveManagerScript : MonoBehaviour
     private EnemySpawn enemySpawn;
     private GameObject player;
     private PlayerStats playerStats;
+    private UIManager uiManager;
 
     private bool paused = false;
     void Start()
     {
         waveSlider = waveProgressBar.GetComponent<Slider>();
         enemiesText = waveProgressBar.transform.GetChild(2).GetComponent<TextMeshProUGUI>();
+        uiManager = GameObject.Find("UI").GetComponent<UIManager>();
 
         enemySpawn = enemySpawner.GetComponent<EnemySpawn>();
         player = GameObject.Find("Player");
@@ -62,6 +64,9 @@ public class WaveManagerScript : MonoBehaviour
             waveSlider.value = 0f;
 
             spawnTimer = 0f;
+
+            // pause game and open wave panel.
+            if (currentWave > 1) uiManager.OpenWavePrizePanel();
         }
         if (waveActive)
         {
