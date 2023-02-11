@@ -25,8 +25,11 @@ public class PlayerStats : MonoBehaviour
 
     public ComboBar comboBar;
 
+    private bool paused = false;
+
     void Update()
     {
+        if (paused) return;
         runTime += Time.deltaTime;   
     }
 
@@ -83,6 +86,29 @@ public class PlayerStats : MonoBehaviour
         string jsonNew = JsonConvert.SerializeObject(achievements, Formatting.Indented);
         File.WriteAllText(filePath, jsonNew);
 
+    }
+
+
+    private void Pause()
+    {
+        paused = true;
+    }
+
+    private void Unpause()
+    {
+        paused = false;
+    }
+
+    private void OnEnable()
+    {
+        UIManager.onPause += Pause;
+        UIManager.onUnpause += Unpause;
+    }
+
+    private void OnDisable()
+    {
+        UIManager.onPause -= Pause;
+        UIManager.onUnpause -= Unpause;
     }
 
 }

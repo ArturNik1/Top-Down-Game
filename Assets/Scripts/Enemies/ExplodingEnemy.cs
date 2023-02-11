@@ -22,6 +22,7 @@ public class ExplodingEnemy : Enemy
     // Update is called once per frame
     public override void Update()
     {
+        if (paused) return;
         base.Update();
 
         if (exploded) return;

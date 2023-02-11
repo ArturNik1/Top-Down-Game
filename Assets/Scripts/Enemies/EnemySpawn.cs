@@ -11,7 +11,6 @@ public class EnemySpawn : MonoBehaviour
     [HideInInspector]
     public List<GameObject> enemiesList;
     public List<Vector2> spawnPointsList;
-    private int count = 0;
 
     [HideInInspector]
     public float dropRateIncreasePercent = 0f;
@@ -52,7 +51,6 @@ public class EnemySpawn : MonoBehaviour
         int upTo = (currentWave == 1) ? 1 : (currentWave <= 3) ? 2 : (currentWave <= 6) ? 3 : enemiesList.Count;  
         GameObject enemyObject = Instantiate(enemiesList[Random.Range(0, upTo)], spawnPoint, Quaternion.identity);
         enemyObject.GetComponent<Enemy>().UpdateStats(currentWave);
-        count++;
     }
 
     void OnDrawGizmosSelected()

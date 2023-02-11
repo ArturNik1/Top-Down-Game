@@ -28,7 +28,7 @@ public class PlayerDash : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (playerMovement.paused) return;   
         if (state == DashState.Ready && Input.GetKeyDown(KeyCode.LeftShift)) {
             playerMovement.setDashing(true);
             state = DashState.Dashing;

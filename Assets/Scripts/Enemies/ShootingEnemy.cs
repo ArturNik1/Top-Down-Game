@@ -18,6 +18,7 @@ public class ShootingEnemy : Enemy
     // Update is called once per frame
     public override void Update()
     {
+        if (paused) return;
         base.Update();
         Move();
         
@@ -25,9 +26,7 @@ public class ShootingEnemy : Enemy
         if (shootTime <= 0)
         {
             shootTime = defaultShootTime;
-            Vector3 bulletPos = transform.position;
-            GameObject bullet_obj = Instantiate(bullet, bulletPos, Quaternion.identity);
-            Physics2D.IgnoreCollision(bullet_obj.transform.GetComponent<Collider2D>(), GetComponent<Collider2D>());
+            Shoot();
         }
 
     }

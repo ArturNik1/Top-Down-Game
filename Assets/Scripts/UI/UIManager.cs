@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
 
 public class UIManager : MonoBehaviour
 {
@@ -19,9 +20,13 @@ public class UIManager : MonoBehaviour
 
     private PlayerStats playerStats;
     private LevelManager levelManager;
+    private EnemySpawn enemySpawn;
 
     public TextMeshProUGUI itemText;
     private int showItemText = 0;
+
+    public static event Action onPause;
+    public static event Action onUnpause;
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +41,7 @@ public class UIManager : MonoBehaviour
 
         playerStats = GameObject.Find("Player").GetComponent<PlayerStats>();
         levelManager = GameObject.Find("Level Manager").GetComponent<LevelManager>();
+        enemySpawn = GameObject.Find("Enemy Spawner").GetComponent<EnemySpawn>();
     }
 
     private void Update()
@@ -49,8 +55,13 @@ public class UIManager : MonoBehaviour
             if (itemText.alpha == 0) showItemText = 0;
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape) && SceneManager.GetActiveScene().name == "SampleScene") {
+        if (Input.GetKeyDown(KeyCode.Escape) && SceneManager.GetActiveScene().name == "SampleScene" && !gameOverPanel.activeSelf) {
             escapePanel.SetActive(!escapePanel.activeSelf);
+            
+            if (escapePanel.activeSelf) onPause.Invoke();
+            else onUnpause.Invoke();
+
+            // pause enemy movement(V) + wave timer + shooting(V) + item movement
         }
 
     }

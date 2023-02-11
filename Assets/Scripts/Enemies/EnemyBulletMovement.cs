@@ -10,6 +10,8 @@ public class EnemyBulletMovement : MonoBehaviour
     public float bulletSpeed;
     public int hitAmount;
 
+    private bool paused = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +32,7 @@ public class EnemyBulletMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (paused) return;
         transform.position += (bulletDirection * Time.deltaTime * bulletSpeed);
     }
 
@@ -41,7 +44,30 @@ public class EnemyBulletMovement : MonoBehaviour
         }
         else
         {
+
             Destroy(gameObject);
         }
+    }
+
+    private void PauseBullet()
+    {
+        paused = true;
+    }
+
+    private void UnpauseBullet()
+    {
+        paused = false;
+    }
+
+    private void OnEnable()
+    {
+        UIManager.onPause += PauseBullet;
+        UIManager.onUnpause += UnpauseBullet;
+    }
+
+    private void OnDisable()
+    {
+        UIManager.onPause -= PauseBullet;
+        UIManager.onUnpause -= UnpauseBullet;
     }
 }

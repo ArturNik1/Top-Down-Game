@@ -11,6 +11,9 @@ public class Player_Movement : MonoBehaviour
     private new Rigidbody2D rigidbody;
     private PlayerCollision playerCollision;
     private PlayerCombat playerCombat;
+
+    [HideInInspector]
+    public bool paused = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +25,7 @@ public class Player_Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (paused) return;
         if (playerCollision.isHit) {
             rigidbody.velocity = playerCollision.getHitDirection();
             return;
@@ -66,5 +70,28 @@ public class Player_Movement : MonoBehaviour
         attackDirection = mousePos3D - transform.position;
         attackDirection.Normalize();
         return attackDirection;
+    }
+
+
+    private void Pause()
+    {
+        paused = true;
+    }
+
+    private void Unpause()
+    {
+        paused = false;
+    }
+
+    private void OnEnable()
+    {
+        UIManager.onPause += Pause;
+        UIManager.onUnpause += Unpause;
+    }
+
+    private void OnDisable()
+    {
+        UIManager.onPause -= Pause;
+        UIManager.onUnpause -= Unpause;
     }
 }

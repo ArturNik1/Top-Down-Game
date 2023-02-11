@@ -13,6 +13,7 @@ public class BasicEnemy : Enemy
     // Update is called once per frame
     public override void Update()
     {
+        if (paused) return;
         base.Update();
         Move();
     }

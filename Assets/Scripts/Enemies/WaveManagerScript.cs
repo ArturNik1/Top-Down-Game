@@ -25,6 +25,8 @@ public class WaveManagerScript : MonoBehaviour
     private EnemySpawn enemySpawn;
     private GameObject player;
     private PlayerStats playerStats;
+
+    private bool paused = false;
     void Start()
     {
         waveSlider = waveProgressBar.GetComponent<Slider>();
@@ -40,6 +42,7 @@ public class WaveManagerScript : MonoBehaviour
 
     void Update()
     {
+        if (paused) return;
         if (player == null) return;
         timer += Time.deltaTime;
         waveSlider.value = timer / waveInterval;
@@ -99,5 +102,27 @@ public class WaveManagerScript : MonoBehaviour
     private float WaveTimeFunctionTransformation(int amountOfEnemies)
     {
         return (amountOfEnemies * spawnInterval) + 10f;
+    }
+
+    private void Pause()
+    {
+        paused = true;
+    }
+
+    private void Unpause()
+    {
+        paused = false;
+    }
+
+    private void OnEnable()
+    {
+        UIManager.onPause += Pause;
+        UIManager.onUnpause += Unpause;
+    }
+
+    private void OnDisable()
+    {
+        UIManager.onPause -= Pause;
+        UIManager.onUnpause -= Unpause;
     }
 }

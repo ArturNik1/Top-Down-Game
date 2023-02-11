@@ -39,6 +39,9 @@ public abstract class Enemy : MonoBehaviour
     public GameObject waveManager;
     private WaveManagerScript waveManagerScript;
 
+    [HideInInspector]
+    public bool paused = false;
+
     // Start is called before the first frame update
     protected void Start()
     {
@@ -103,6 +106,27 @@ public abstract class Enemy : MonoBehaviour
         maxHealth += Mathf.FloorToInt(0.045f * currentWave * maxHealth);
         health = maxHealth;
         hitAmount += Mathf.FloorToInt(0.075f * currentWave * hitAmount);
+    }
+
+
+    private void PauseEnemy() {
+        paused = true;
+    }
+
+    private void UnpauseEnemy() {
+        paused = false;
+    }
+
+    private void OnEnable()
+    {
+        UIManager.onPause += PauseEnemy;
+        UIManager.onUnpause += UnpauseEnemy;
+    }
+
+    private void OnDisable()
+    {
+        UIManager.onPause -= PauseEnemy;
+        UIManager.onUnpause -= UnpauseEnemy;
     }
 
 }
