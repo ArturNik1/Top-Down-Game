@@ -16,7 +16,7 @@ public class UIManager : MonoBehaviour
     private bool dontShowWavePanel = false;
 
     public GameObject escapePanel;
-    private Animator closePanel;
+    private Animator uiAnimator;
     private Slider musicSlider;
     private Slider soundSlider;
     private Sound backgroundSound;
@@ -27,15 +27,25 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI itemText;
     private int showItemText = 0;
 
+    public RuntimeAnimatorController transitionController;
+    public RuntimeAnimatorController gameOverPanelController;
+    public RuntimeAnimatorController pausePanelController;
+    public RuntimeAnimatorController wavePrizeController;
+
+    public Button[] prizeButtons;
+    public Button randomPrizeButton;
+
+    private ItemManager itemManager;
+
     public static event Action onPause;
     public static event Action onUnpause;
 
     // Start is called before the first frame update
     void Start()
     {
-        closePanel = GetComponent<Animator>();
-        musicSlider = closePanel.transform.GetChild(2).GetChild(2).GetComponent<Slider>();
-        soundSlider = closePanel.transform.GetChild(2).GetChild(4).GetComponent<Slider>();
+        uiAnimator = GetComponent<Animator>();
+        musicSlider = uiAnimator.transform.GetChild(2).GetChild(2).GetComponent<Slider>();
+        soundSlider = uiAnimator.transform.GetChild(2).GetChild(4).GetComponent<Slider>();
         backgroundSound = AudioManager.instance.GetSound("background");
 
         musicSlider.value = backgroundSound.volume;
@@ -43,6 +53,7 @@ public class UIManager : MonoBehaviour
 
         playerStats = GameObject.Find("Player").GetComponent<PlayerStats>();
         levelManager = GameObject.Find("Level Manager").GetComponent<LevelManager>();
+        itemManager = GameObject.Find("Item Spawn Manager").GetComponent<ItemManager>();
     }
 
     private void Update()
@@ -57,12 +68,22 @@ public class UIManager : MonoBehaviour
         }
 
         if (Input.GetKeyDown(KeyCode.Escape) && SceneManager.GetActiveScene().name == "SampleScene" && !gameOverPanel.activeSelf && !wavePrizePanel.activeSelf) {
-            escapePanel.SetActive(!escapePanel.activeSelf);
+            uiAnimator.runtimeAnimatorController = pausePanelController;
             
-            if (escapePanel.activeSelf) onPause.Invoke();
-            else onUnpause.Invoke();
+            if (escapePanel.activeSelf) {
+                uiAnimator.SetTrigger("close");
+            }
+            else {
+                uiAnimator.SetTrigger("open");
+            }
         }
 
+    }
+
+    public void ChangeEscapePanelState() {
+        escapePanel.SetActive(!escapePanel.activeSelf);
+        if (escapePanel.activeSelf) onPause.Invoke();
+        else onUnpause.Invoke();
     }
 
     public void ChangeMusicSlider() {
@@ -86,7 +107,8 @@ public class UIManager : MonoBehaviour
     private void OpenGameOverPanel()
     {
         wavePanel.SetActive(false);
-        gameOverPanel.SetActive(true);
+        uiAnimator.runtimeAnimatorController = gameOverPanelController;
+        uiAnimator.SetTrigger("open");
         StartCoroutine(WriteText());
     }
 
@@ -97,7 +119,7 @@ public class UIManager : MonoBehaviour
 
         // Update text according to stats...
         // Score
-        children[1].text += playerStats.score + " x " + playerStats.highestMultiplier + " = " + (playerStats.score * playerStats.highestMultiplier);
+        children[1].text += (playerStats.score / playerStats.highestMultiplier) + " x " + playerStats.highestMultiplier + " = " + playerStats.score;
         // Wave
         children[2].text += playerStats.wave;
         // Run Time
@@ -124,32 +146,92 @@ public class UIManager : MonoBehaviour
 
         yield return null;
     }
+
+    public void ChangeGameOverPanelState() {
+        gameOverPanel.SetActive(!gameOverPanel.activeSelf);
+    }
+
     #endregion
 
     #region Wave Prize Panel Stuff
 
     public void OpenWavePrizePanel() {
         if (dontShowWavePanel) {
-            GetRandomPrize();
+            StartCoroutine(GetRandomPrize());
             return;
         }
+        PopulateButtons();
         onPause.Invoke();
-        wavePrizePanel.SetActive(true);
+        uiAnimator.runtimeAnimatorController = wavePrizeController;
+        uiAnimator.SetTrigger("open");
     }
 
     public void CloseWavePrizePanel() {
         onUnpause.Invoke();
-        wavePrizePanel.SetActive(false);
+        uiAnimator.runtimeAnimatorController = wavePrizeController;
+        uiAnimator.SetTrigger("close");
     }
 
-    public void DontShowWavePanel() {
-        dontShowWavePanel = true;
-        GetRandomPrize();
-        CloseWavePrizePanel();
+
+    IEnumerator GetRandomPrize() {
+        Item[] items = itemManager.GetThreeItemsForPrizePanel();
+
+        yield return new WaitForEndOfFrame();
+
+        items[0].PickUpItem();
+        ShowOnScreenItemText(items[0].pickUPText);
+        foreach (Item curItem in items) {
+            Destroy(curItem.gameObject);
+        }
     }
 
-    public void GetRandomPrize() { 
-        // TODO
+    
+
+    public void ChangeWavePrizePanelState() {
+        wavePrizePanel.SetActive(!wavePrizePanel.activeSelf);
+    }
+
+    public void PopulateButtons() {
+
+        foreach (Button button in prizeButtons) {
+            button.interactable = true;
+        }
+
+        randomPrizeButton.onClick.RemoveAllListeners();
+
+        // Choose 3 random power ups and add them
+        Item[] items = itemManager.GetThreeItemsForPrizePanel();
+        for (int i = 0; i < items.Length; i++) {
+            Item item = items[i];
+            prizeButtons[i].onClick.RemoveAllListeners();
+            prizeButtons[i].transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = item.pickUPText;
+            prizeButtons[i].onClick.AddListener(() =>
+            {
+                foreach (Button button in prizeButtons) {
+                    button.interactable = false;
+                }
+
+                item.PickUpItem();
+                ShowOnScreenItemText(item.pickUPText);
+                foreach (Item curItem in items) {
+                    Destroy(curItem.gameObject);
+                }
+
+                CloseWavePrizePanel();
+            });
+        }
+        randomPrizeButton.onClick.AddListener(() =>
+        {
+            dontShowWavePanel = true;
+            int r = UnityEngine.Random.Range(0, 2);
+            items[r].PickUpItem();
+            ShowOnScreenItemText(items[r].pickUPText);
+            foreach (Item curItem in items)
+            {
+                Destroy(curItem.gameObject);
+            }
+            CloseWavePrizePanel();
+        });
     }
 
     #endregion
@@ -165,12 +247,14 @@ public class UIManager : MonoBehaviour
     }
 
     public void RestartRun() {
-        closePanel.SetTrigger("close"); 
+        uiAnimator.runtimeAnimatorController = transitionController;
+        uiAnimator.SetTrigger("close"); 
         levelManager.LoadLevelWrapper("SampleScene");
     }
 
     public void ReturnToMenu() {
-        closePanel.SetTrigger("close");
+        uiAnimator.runtimeAnimatorController = transitionController;
+        uiAnimator.SetTrigger("close");
         levelManager.LoadLevelWrapper("Menu");
     }
 

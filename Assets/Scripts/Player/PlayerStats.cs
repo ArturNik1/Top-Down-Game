@@ -36,6 +36,7 @@ public class PlayerStats : MonoBehaviour
     public void CalculateScore()
     {
         score = Mathf.FloorToInt((runTime / 2f) + ((wave - 1) * 10) + powerUpsPicked);
+        score *= highestMultiplier;
         PlayerPrefs.SetInt("coins", PlayerPrefs.GetInt("coins", 0) + score);
         if (PlayerPrefs.GetInt("score", -1) < score) PlayerPrefs.SetInt("score", score);
     }

@@ -8,8 +8,7 @@ public class ItemManager : MonoBehaviour
     public int powerUpsToSpawn = 2;
     public int weaponsToSpawn = 1;
 
-    public GameObject spawnLocationsHolder;
-    private Vector3[] spawnLocations;
+    public Vector3[] spawnLocationsArray;
 
     public GameObject[] powerUps;
     public GameObject[] weapons;
@@ -17,16 +16,11 @@ public class ItemManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Transform[] children = spawnLocationsHolder.GetComponentsInChildren<Transform>();
-        spawnLocations = new Vector3[children.Length - 1];
-        for (int i = 1; i < children.Length; i++) {
-            spawnLocations[i - 1] = children[i].transform.position;
-        }
         SpawnItemsOnMap();
     }
 
     public void SpawnItemsOnMap() {
-        Vector3[] randomLocations = (Vector3[])spawnLocations.Clone();
+        Vector3[] randomLocations = (Vector3[])spawnLocationsArray.Clone();
         ShuffleArray(randomLocations);
         int currentIndex = 0;
 
@@ -45,6 +39,13 @@ public class ItemManager : MonoBehaviour
             obj.transform.GetComponent<Item>().UpdateY_Start(); 
             currentIndex++;
         }
+    }
+
+    public Item[] SpawnThreeItemsOnMapForPrize(GameObject[] toSpawn) {
+        Vector3 location = new Vector3(-1000, -1000, -1000);
+        return new Item[] {Instantiate(toSpawn[0], location, Quaternion.identity).GetComponent<Item>(),
+                            Instantiate(toSpawn[1], location, Quaternion.identity).GetComponent<Item>(),
+                            Instantiate(toSpawn[2], location, Quaternion.identity).GetComponent<Item>()};
     }
 
     public void SpawnWeapon(Vector3 position) {
@@ -75,6 +76,23 @@ public class ItemManager : MonoBehaviour
         }
     }
 
+    public Item[] GetThreeItemsForPrizePanel() {
+        if (powerUps.Length < 3) throw new Exception("not enough powerups...");
+        GameObject[] randomPowerUps = (GameObject[])powerUps.Clone();
+        ShuffleArray(randomPowerUps);
+
+        return SpawnThreeItemsOnMapForPrize(randomPowerUps);
+    }
+
+
+    void OnDrawGizmosSelected()
+    {
+        for (int i = 0; i < spawnLocationsArray.Length; ++i)
+        {
+            Gizmos.DrawWireSphere(spawnLocationsArray[i], 0.5f);
+        }
+
+    }
 
 }
 
