@@ -13,6 +13,7 @@ public class MainMenuManager : MonoBehaviour
     public TextMeshProUGUI coinsText;
     public GameObject creditsPanel;
     public GameObject achievementsPanel;
+    public GameObject storePanel;
 
     public Slider musicSlider;
     public Slider soundSlider;
@@ -55,5 +56,9 @@ public class MainMenuManager : MonoBehaviour
 
     public void ChangeAchievementsPanelState() {
         achievementsPanel.SetActive(!achievementsPanel.activeSelf);
+    }
+
+    public void ChangeStorePanelState() {
+        storePanel.SetActive(!storePanel.activeSelf);
     }
 }
