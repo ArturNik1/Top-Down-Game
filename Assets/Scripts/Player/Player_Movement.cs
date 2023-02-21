@@ -6,11 +6,13 @@ public class Player_Movement : MonoBehaviour
 {
     public float speed;
     public float dashSpeed;
+    public Animator animator;
     private Vector2 attackDirection;
     private float dashing = 1.0f;
     private new Rigidbody2D rigidbody;
     private PlayerCollision playerCollision;
     private PlayerCombat playerCombat;
+    private SpriteRenderer spriteRenderer;
 
     [HideInInspector]
     public bool paused = false;
@@ -20,6 +22,8 @@ public class Player_Movement : MonoBehaviour
         rigidbody = GetComponent<Rigidbody2D>();
         playerCollision = GetComponent<PlayerCollision>();
         playerCombat = GetComponent<PlayerCombat>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+
     }
 
     // Update is called once per frame
@@ -31,6 +35,19 @@ public class Player_Movement : MonoBehaviour
             return;
         }
 
+        //animations
+        animator.SetFloat("Speed", rigidbody.velocity.magnitude);
+
+        float moveDirection = Input.GetAxisRaw("Horizontal");
+
+        if (moveDirection > 0)
+        {
+            spriteRenderer.flipX = false;
+        }
+        else if (moveDirection < 0)
+        {
+            spriteRenderer.flipX = true;
+        }
         /*
         if (playerCombat.isAttacking)
         {

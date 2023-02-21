@@ -11,6 +11,8 @@ public class PlayerDash : MonoBehaviour
 {
     public float maxDashTime;
     public float maxChargeTime;
+    public Animator animator;
+
     private float currentChargeTime;
     private float currentDashTime;
 
@@ -28,6 +30,11 @@ public class PlayerDash : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        //animations
+        bool dashing = state == DashState.Dashing;
+        animator.SetBool("Sliding", dashing);
+
         if (playerMovement.paused) return;   
         if (state == DashState.Ready && Input.GetKeyDown(KeyCode.LeftShift)) {
             playerMovement.setDashing(true);
