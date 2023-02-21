@@ -38,6 +38,7 @@ public class StoreItemButton : MonoBehaviour
                 PlayerPrefs.SetInt("coins", coins - storeItem.price);
                 GameObject.Find("Canvas").GetComponent<MainMenuManager>().coinsText.text = "Coins: " + PlayerPrefs.GetInt("coins", 0);
                 this.coins = PlayerPrefs.GetInt("coins", 0);
+                storeHandler.AddObjectToPurchasedSet(storeItem);
             }
         });
     }
@@ -71,7 +72,5 @@ public class StoreItemButton : MonoBehaviour
         transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = storeItem.itemName;
         transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = storeItem.itemDescription;
         transform.GetChild(3).GetComponent<TextMeshProUGUI>().text = "Price: " + storeItem.price;
-
-        if (storeItem.purchased) button.interactable = false;
     }
 }

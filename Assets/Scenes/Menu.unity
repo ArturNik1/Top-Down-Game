@@ -2710,27 +2710,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resetFile: 0
   storeItemSetup:
-  - itemName: Choices
+  - prefabName: PowerUP_MaxHealth
+    itemName: Choices
     itemDescription: Choose a power up at the start of the round!
     price: 1000
     purchased: 0
-  - itemName: Temp one
+  - prefabName: PowerUP_MaxHealth
+    itemName: Temp one
     itemDescription: This is a place holder....
     price: 10000
     purchased: 0
-  - itemName: Temp two
+  - prefabName: PowerUP_Speed
+    itemName: Temp two
     itemDescription: This is a place holder....
     price: 70657
     purchased: 0
-  - itemName: Temp three
+  - prefabName: PowerUP_AttackDamage
+    itemName: Temp three
     itemDescription: This is a place holder....
     price: 604368
     purchased: 0
-  - itemName: Temp four
+  - prefabName: PowerUP_AttackDamage
+    itemName: Temp four
     itemDescription: This is a place holder....
     price: 1000000
     purchased: 0
-  - itemName: Temp five
+  - prefabName: PowerUP_AttackDamage
+    itemName: Temp five
     itemDescription: This is a place holder....
     price: 2147483647
     purchased: 0

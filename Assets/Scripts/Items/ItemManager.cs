@@ -1,6 +1,9 @@
+using Newtonsoft.Json;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using UnityEditor;
 using UnityEngine;
 
 public class ItemManager : MonoBehaviour
@@ -16,7 +19,32 @@ public class ItemManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        AddPowerUpsToStoreList();
         SpawnItemsOnMap();
+    }
+
+    public void AddPowerUpsToStoreList() {
+        string filePath = Application.dataPath + "/Resources/storeItems.json";
+        if (File.Exists(filePath)) {
+            string json = File.ReadAllText(filePath);
+            HashSet<StoreItem> purchasedItems = JsonConvert.DeserializeObject<HashSet<StoreItem>>(json);
+            StoreItem[] storeItems = new StoreItem[purchasedItems.Count];
+            int i = 0;
+            foreach (StoreItem storeItem in purchasedItems) {
+                storeItems[i++] = storeItem;
+            }
+
+            GameObject[] combinedPowerUps = new GameObject[storeItems.Length + powerUps.Length];
+            for (i = 0; i < powerUps.Length; i++) {
+                combinedPowerUps[i] = powerUps[i];
+            }
+            for (; i < combinedPowerUps.Length; i++) {
+                string path = "Assets/Prefabs/Items/Power Ups/" + storeItems[i - powerUps.Length].prefabName + ".prefab";
+                combinedPowerUps[i] = AssetDatabase.LoadAssetAtPath<GameObject>(path);
+            }
+
+            powerUps = combinedPowerUps;
+        }
     }
 
     public void SpawnItemsOnMap() {

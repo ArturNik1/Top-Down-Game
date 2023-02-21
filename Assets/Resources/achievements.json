@@ -61,7 +61,7 @@
   },
   "Survive": {
     "achievementName": "Survive",
-    "currentValue": 610,
+    "currentValue": 618,
     "currentStar": 3,
     "targets": [
       15,
@@ -86,7 +86,7 @@
   },
   "Reach Score": {
     "achievementName": "Reach Score",
-    "currentValue": 5001319,
+    "currentValue": 5001323,
     "currentStar": 5,
     "targets": [
       50,

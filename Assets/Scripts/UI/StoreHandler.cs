@@ -1,3 +1,4 @@
+using Newtonsoft.Json;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -7,6 +8,7 @@ public class StoreHandler : MonoBehaviour
 {
     string filePath;
     Dictionary<string, StoreItem> storeItems = new Dictionary<string, StoreItem>();
+    HashSet<StoreItem> purchasedItems = new HashSet<StoreItem>();
 
     public bool resetFile = false;
     //[Header("if adding/changing, remember to do it in PlayerStats, function UpdateAchievementsStats() too")]
@@ -23,12 +25,31 @@ public class StoreHandler : MonoBehaviour
         if (resetFile && File.Exists(filePath)) File.Delete(filePath);
 
         ReadDataFromInspector();
+        ReadDataFromFile();
         UpdateButtons();
     }
 
-    // Update is called once per frame
-    void Update() {
-        
+    public void WriteDataToFile() {
+        // write to the file only the items we've bought.
+        string json = JsonConvert.SerializeObject(purchasedItems, Formatting.Indented);
+        File.WriteAllText(filePath, json);
+    }
+
+    public void ReadDataFromFile() { 
+        if (File.Exists(filePath)) {
+            string json = File.ReadAllText(filePath);
+            purchasedItems = JsonConvert.DeserializeObject<HashSet<StoreItem>>(json);
+            foreach(StoreItem storeItem in purchasedItems) { 
+                if (storeItems.ContainsKey(storeItem.itemName)) {
+                    storeItems[storeItem.itemName].purchased = true;
+                }
+            }
+        }
+    }
+
+    public void AddObjectToPurchasedSet(StoreItem storeItem) {
+        purchasedItems.Add(storeItem);
+        WriteDataToFile();
     }
 
     public void AddObject(StoreItem storeItem) {
@@ -66,13 +87,15 @@ public class StoreHandler : MonoBehaviour
 [System.Serializable]
 public class StoreItem
 {
+    public string prefabName;
     public string itemName;
     public string itemDescription;
     public int price;
     public bool purchased;
 
-    public StoreItem(string itemName, string itemDescription, int price, bool purchased)
+    public StoreItem(string prefabName, string itemName, string itemDescription, int price, bool purchased)
     {
+        this.prefabName = prefabName;
         this.itemName = itemName;
         this.itemDescription = itemDescription;
         this.price = price;

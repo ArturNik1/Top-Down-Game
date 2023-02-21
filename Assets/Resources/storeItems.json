@@ -1,0 +1,30 @@
+[
+  {
+    "prefabName": "PowerUP_MaxHealth",
+    "itemName": "Temp one",
+    "itemDescription": "This is a place holder....",
+    "price": 10000,
+    "purchased": true
+  },
+  {
+    "prefabName": "PowerUP_MaxHealth",
+    "itemName": "Choices",
+    "itemDescription": "Choose a power up at the start of the round!",
+    "price": 1000,
+    "purchased": true
+  },
+  {
+    "prefabName": "PowerUP_Speed",
+    "itemName": "Temp two",
+    "itemDescription": "This is a place holder....",
+    "price": 70657,
+    "purchased": true
+  },
+  {
+    "prefabName": "PowerUP_AttackDamage",
+    "itemName": "Temp three",
+    "itemDescription": "This is a place holder....",
+    "price": 604368,
+    "purchased": true
+  }
+]

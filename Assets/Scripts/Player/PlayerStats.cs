@@ -82,6 +82,7 @@ public class PlayerStats : MonoBehaviour
         achievements["Pick Up Items"].currentValue += powerUpsPicked;
         achievements["Reach Score"].currentValue += score;
 
+
         ///
 
         string jsonNew = JsonConvert.SerializeObject(achievements, Formatting.Indented);
