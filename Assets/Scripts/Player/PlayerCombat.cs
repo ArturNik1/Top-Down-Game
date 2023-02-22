@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerCombat : MonoBehaviour
 {
     public Transform attackPoint;
-    public float attackRange = 0.5f;
+    public float attackRange = 0.3f;
     public LayerMask enemyLayers;
     private Player_Movement playerMovement;
     public float maxAttackTime = 0.5f;
@@ -16,6 +16,8 @@ public class PlayerCombat : MonoBehaviour
     public int attackDamage = 5;
     public Animator animator;
     private PlayerStats playerStats;
+    private int attack_animation = 1;
+    private int total_attack_animations = 3;
     // Start is called before the first frame update
     void Start()
     {
@@ -46,8 +48,8 @@ public class PlayerCombat : MonoBehaviour
     }
 
     bool MeleeAttack() {
-        animator.ResetTrigger("MeleeAttack");
-        animator.SetTrigger("MeleeAttack");
+
+        TriggerAttackAnimation();
         Collider2D[] hitEnemies= Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
         foreach (Collider2D enemy in hitEnemies)
         {
@@ -56,12 +58,42 @@ public class PlayerCombat : MonoBehaviour
         return hitEnemies.Length > 0;
     }
 
+    void TriggerAttackAnimation() {
+        if (attack_animation == 1) {
+            animator.ResetTrigger("MeleeAttack1");
+            animator.SetTrigger("MeleeAttack1");
+        }
+        else if (attack_animation == 2)
+        {
+            animator.ResetTrigger("MeleeAttack2");
+            animator.SetTrigger("MeleeAttack2");
+        }
+        else if (attack_animation == 3)
+        {
+            animator.ResetTrigger("MeleeAttack3");
+            animator.SetTrigger("MeleeAttack3");
+        }
+        
+        attack_animation++;
+
+        if (attack_animation > total_attack_animations) {
+            attack_animation = 1;
+        }
+
+    }
+
     void OnDrawGizmosSelected() {
         if (attackPoint == null)
             return;
 
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
 
+    }
+
+    IEnumerator Delay(float delayTime)
+    {
+        yield return new WaitForSeconds(delayTime);
+        // Code to execute after the delay
     }
 
 }
