@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class PlayerCombat : MonoBehaviour
 {
-    public Transform attackPoint;
+    public Transform left_attack_point;
+    public Transform right_attack_point;
+    private Transform attack_point;
     public float attackRange = 0.3f;
     public LayerMask enemyLayers;
     private Player_Movement playerMovement;
@@ -18,11 +20,15 @@ public class PlayerCombat : MonoBehaviour
     private PlayerStats playerStats;
     private int attack_animation = 1;
     private int total_attack_animations = 3;
+    private SpriteRenderer spriteRenderer;
+
     // Start is called before the first frame update
     void Start()
     {
         playerMovement = GetComponent<Player_Movement>();
         playerStats = GetComponent<PlayerStats>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+
     }
 
     // Update is called once per frame
@@ -50,7 +56,15 @@ public class PlayerCombat : MonoBehaviour
     bool MeleeAttack() {
 
         TriggerAttackAnimation();
-        Collider2D[] hitEnemies= Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+        if (spriteRenderer.flipX)
+        {
+            attack_point = left_attack_point;
+        }
+        else{
+            attack_point = right_attack_point;
+        }
+
+        Collider2D[] hitEnemies= Physics2D.OverlapCircleAll(attack_point.position, attackRange, enemyLayers);
         foreach (Collider2D enemy in hitEnemies)
         {
             enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
@@ -83,11 +97,9 @@ public class PlayerCombat : MonoBehaviour
     }
 
     void OnDrawGizmosSelected() {
-        if (attackPoint == null)
+        if (attack_point == null)
             return;
-
-        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
-
+        Gizmos.DrawWireSphere(attack_point.position, attackRange);
     }
 
     IEnumerator Delay(float delayTime)

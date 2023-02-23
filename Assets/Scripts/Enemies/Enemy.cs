@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public abstract class Enemy : MonoBehaviour
 {
@@ -9,6 +11,8 @@ public abstract class Enemy : MonoBehaviour
     public GameObject player;
     [HideInInspector]
     public new Rigidbody2D rigidbody;
+    public int levelingRatio = 2;
+    public int level = 1;
     private Vector2 hitDirection;
     [HideInInspector]
     public PlayerStats playerStats;
@@ -16,7 +20,7 @@ public abstract class Enemy : MonoBehaviour
     private ItemManager? itemManager = null;
     private EnemySpawn? enemySpawn = null;
 #nullable disable
-
+    public TextMeshProUGUI levelText;
     [Header("Health Settings")]
     public int maxHealth;
     public int health;
@@ -103,9 +107,12 @@ public abstract class Enemy : MonoBehaviour
 
     public void UpdateStats(int currentWave)
     {
-        maxHealth += Mathf.FloorToInt(0.045f * currentWave * maxHealth);
-        health = maxHealth;
-        hitAmount += Mathf.FloorToInt(0.075f * currentWave * hitAmount);
+
+            level = (int)Mathf.Ceil(currentWave / levelingRatio);
+            maxHealth += Mathf.FloorToInt(0.045f * currentWave * maxHealth);
+            health = maxHealth;
+            hitAmount += Mathf.FloorToInt(0.075f * currentWave * hitAmount);
+            levelText.text = "Level " + level;
     }
 
 

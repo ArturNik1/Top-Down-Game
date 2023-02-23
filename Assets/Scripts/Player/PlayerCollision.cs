@@ -10,7 +10,7 @@ public class PlayerCollision : MonoBehaviour
     [HideInInspector]
     public float currentHitTime = 0;
     public float hitSpeed = 3;
-
+    public Animator animator;
     private Vector2 hitDirection;
     private PlayerInfo playerInfo;
     private PlayerStats playerStats;
@@ -42,6 +42,11 @@ public class PlayerCollision : MonoBehaviour
             // push back
             isHit = true;
             AudioManager.instance.Play("hit1");
+            //hit animations
+            animator.ResetTrigger("Hurt");
+            animator.SetTrigger("Hurt");
+
+
             hitDirection = transform.position - collision.transform.position;
             hitDirection.Normalize();
             currentHitTime = 0;

@@ -26,5 +26,12 @@
     "itemDescription": "This is a place holder....",
     "price": 604368,
     "purchased": true
+  },
+  {
+    "prefabName": "PowerUP_AttackDamage",
+    "itemName": "Temp four",
+    "itemDescription": "This is a place holder....",
+    "price": 1000000,
+    "purchased": true
   }
 ]

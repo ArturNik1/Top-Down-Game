@@ -71,6 +71,10 @@ public class Player_Movement : MonoBehaviour
             dir.y = -1;
         }
 
+        if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.D)) {
+            dir.x = 0;
+        }
+
         dir.Normalize();
         rigidbody.velocity = speed * dir * dashing;
 

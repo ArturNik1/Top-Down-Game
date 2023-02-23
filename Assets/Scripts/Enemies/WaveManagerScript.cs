@@ -13,7 +13,7 @@ public class WaveManagerScript : MonoBehaviour
     private int amountForText = 0;
 
     public int startingWave = 0; // starting wave
-    public float waveInterval = 10f; // time between waves
+    public float waveInterval = 20f; // time between waves
     public float spawnInterval = 0.5f; // time between enemy spawns
     private int currentWave;
     private int enemiesRemaining;

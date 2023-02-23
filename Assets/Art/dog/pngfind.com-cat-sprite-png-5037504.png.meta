@@ -1,0 +1,2247 @@
+fileFormatVersion: 2
+guid: bdc1e8e7ce56f134cb1d34659ee2f45f
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 504
+        width: 30
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10387ff513ddd7842a0044e9996ce14e
+      internalID: 637111759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_1
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 504
+        width: 30
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67cdc011b864093409587496d8117db5
+      internalID: -2057410208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_2
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 504
+        width: 30
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12ee7077833937e45a73077e1de506ea
+      internalID: 1444499317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_3
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 504
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57b94a8cb450b844f99ec6212b399e10
+      internalID: 1253470139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_4
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 504
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eae914aa80bcd2d42980072bba7232c7
+      internalID: -1937447057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_5
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 504
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4659025608833c5428c2d1941eb85e15
+      internalID: 1784906159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_6
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 504
+        width: 26
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eea22599f8e26bb4196d6f80d364fb5c
+      internalID: 50765561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_7
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 504
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6ae8fb1c98225e4c976da786378d371
+      internalID: -1193733628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_8
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 504
+        width: 26
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d088d070a3d27c34fad3cd62e534018f
+      internalID: 490236582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_9
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 504
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 074f389b71a3f2b4584625fed0d934ee
+      internalID: 1085442411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_10
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 504
+        width: 26
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 163b9343a1c2c204da0a615a2cfcea55
+      internalID: 755799084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_11
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 504
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b1b781028bee384fbece7b2716ce2e6
+      internalID: -878383094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_12
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 432
+        width: 32
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 442a1c435fa526449b412ec724b15a2e
+      internalID: 45360998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_13
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 432
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 580eaa1200653204493cdfda2a08f572
+      internalID: 1493253543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_14
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 432
+        width: 32
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7776c8b413daeee41aa902f30d1bd742
+      internalID: -13458713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_15
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 432
+        width: 32
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4fd144bb23c3be4f85f4f78dd4fcb1b
+      internalID: -2107123505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_16
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 432
+        width: 32
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73c8b5c3a400d59419500ad20106508e
+      internalID: -1949382020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_17
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 432
+        width: 32
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b6244da396e9ff40b059333e7792a95
+      internalID: -747492211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_18
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 432
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b07cdbcf85b28643b2118331c51a534
+      internalID: -1251530357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_19
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 432
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bffa9531fbc96dd42a8d579aa444ac7a
+      internalID: 764197616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_20
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 432
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4745eae552f3b0a4da7c6c1147379702
+      internalID: -57168876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_21
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 432
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8083faadbc63a843b776d939c424950
+      internalID: 1962404681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_22
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 432
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c13887f824c7ed408d47814bbb1bb4f
+      internalID: 523200784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_23
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 432
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 498928442076ee246a59c2faadad720c
+      internalID: -396853358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_24
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 360
+        width: 32
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 649c5abd400231642b94eb72a1eab0e9
+      internalID: -1304453910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_25
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 360
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d780de8738a5b8a4b85d60142075d2ea
+      internalID: 1504913095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_26
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 360
+        width: 32
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd4077263dfe3c74296485102de35741
+      internalID: 651555135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_27
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 360
+        width: 32
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 537c71650c214124bba27de4d6d6c10f
+      internalID: 341085731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_28
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 360
+        width: 32
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b0aeac2aacee1c48ac2c417d7dc8400
+      internalID: -1232521220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_29
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 360
+        width: 32
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dff0f563b47797f4c8f80504a6789d97
+      internalID: -290578108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_30
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 360
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d58be3ae37220c42a0efdb6d0cd9d91
+      internalID: 1408227555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_31
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 360
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64985383ccd19f340a1328a9200378ec
+      internalID: -928769360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_32
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 360
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 271f166b4ea9ec248a6cdaa20f669662
+      internalID: -94278890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_33
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 360
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 760dfe1b6657b6d4bb032a3bc2fc6b1a
+      internalID: -1479592906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_34
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 360
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e1cdd0657292dd48972fea351902b74
+      internalID: -47487720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_35
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 360
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed0d3d784f8ec1143995dfe99c7d79fd
+      internalID: -877297268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_36
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 288
+        width: 30
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37d200cf40557734cb87111720c690c2
+      internalID: -958952691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_37
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 288
+        width: 30
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68d3392f1e9fd4849b6e7402f3e60529
+      internalID: 2027527341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_38
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 288
+        width: 30
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb8bf19e706ffd841a674a9ede4cc748
+      internalID: -581493972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_39
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 288
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c94212f88df02b348a630e7190928a40
+      internalID: 920276885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_40
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 288
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3868a46c39224e14c94e6783f5a03136
+      internalID: -1418695417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_41
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 288
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40612df482e484340af8329ce92968e7
+      internalID: -1320827710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_42
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 288
+        width: 26
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2c5542c2e624bd4f810f33f36b5b2b2
+      internalID: 181613005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_43
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 288
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0c73716801d30041a0f01f9348fa042
+      internalID: 994009969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_44
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 288
+        width: 26
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 992e0dbc9d5f415499c30d20b9e52fdf
+      internalID: 857222890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_45
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 288
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aa48c292db280f4b9723e41413b6b67
+      internalID: 1719585983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_46
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 288
+        width: 26
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29f03fad4f822fd4e80bc779f07a10db
+      internalID: -1176956953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_47
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 288
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 350f24ceb82750444af5902d1d048f52
+      internalID: -1251275687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_48
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 216
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca67ee3bae6cea24ab5748578019b84d
+      internalID: 1857488540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_49
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 216
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8440558e1253d3418cca4aa1200c48b
+      internalID: -2071145816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_50
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 216
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9e52c54267114a4bbebb9d349d0ca3b
+      internalID: -2124257920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_51
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 216
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd6e15dd4dbf81f45acdaa37e3016ae2
+      internalID: -323660456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_52
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 216
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec52499f0fc936e49b203f5624a045ee
+      internalID: -735692855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_53
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 216
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5435151d69d86d43bafac7280b46f7b
+      internalID: 454827693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_54
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 216
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82d98774316de6e448b0795789e7a667
+      internalID: -276924281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_55
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 216
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b132ca5e42227564da3a06504b261359
+      internalID: 143727838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_56
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 216
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 494ea250742154845b04bb7973b9cf12
+      internalID: 636020125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_57
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 216
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a00e2d09a79d253489257d2da16ed5cc
+      internalID: -2015946214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_58
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 216
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f63e797db6d63147b2b2c2936d68271
+      internalID: 1191722518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_59
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 216
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 583acf9c7c7a30f4db248779fed03bc1
+      internalID: 1581358264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_60
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 144
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a34915c77eb85fa4ab9f903199bc25b0
+      internalID: 1120163382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_61
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 144
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bcf3548c7faa5e439b97cd4555b4a60
+      internalID: -508642922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_62
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 144
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 629138e1181e3e14c94bd6425ba49036
+      internalID: 923909254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_63
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 144
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7569b919d59d5d94aaee37db1c873022
+      internalID: 456271429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_64
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 144
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95863d956edd55140a153dd695da47c7
+      internalID: -820584030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_65
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 144
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebfcb5e37701ee54f8764055dff9243a
+      internalID: 1060816791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_66
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 144
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7063192cebf674b48a09afa351dd6d78
+      internalID: 1832400352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_67
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 144
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e26b3ee3e783674ab2c42385457c431
+      internalID: -557662177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_68
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 144
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d061e38b2eddd3438e5be0529ede17c
+      internalID: -1379343272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_69
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 144
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b93e8699f308dbf46b5aea5d14a7ee64
+      internalID: -396718817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_70
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 144
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc258f784a8c6da4d8288f372689bc78
+      internalID: -1496343140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_71
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 144
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c5ea4893d0136c46af663ac66ac39d7
+      internalID: -237303841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_72
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 72
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 335eb18c82b2a734c82ab3aa20fda8c5
+      internalID: 1718731953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_73
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 72
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c2986578bb06004197924b7c5c6329e
+      internalID: -1420124609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_74
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 72
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65a0817e61495c04c9987f5bf7bed1f4
+      internalID: 2075728091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_75
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 72
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 283b8248e3d2f8d4d9d4f7af483b30df
+      internalID: -412620239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_76
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 72
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c59b32c5239e0d4fae6a5fbda0f1d5e
+      internalID: 1830881947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_77
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 72
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc4c74d4350ed3f48baf1d94fba39323
+      internalID: 1247708288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_78
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 72
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15b115f089c5f904d96deeadd43f861f
+      internalID: 1653233889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_79
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 72
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd36f3381c57f5a47a3cb8c6dbffa807
+      internalID: 1314376334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_80
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 72
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 241c69a878a4bec489cadeb61de7a652
+      internalID: -256384772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_81
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 72
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7d964b3375576742a3c544840ab891c
+      internalID: 929099524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_82
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 72
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9548b2f189ceb5d4880406dda502dcb7
+      internalID: 868749031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_83
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 72
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a07ce3c24d21bf44082ce1325e2c423a
+      internalID: 1473358243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_84
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 0
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 558d830b06e633143a541c9637447866
+      internalID: 1568490037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_85
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 0
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d79b8ac790b1d2c4790b5a9954e020d8
+      internalID: -1676183650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_86
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 0
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acdf39e70759b2a478672d4dd870dcb9
+      internalID: 1502928292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_87
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 0
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03060f77229cadc4382d2c6c51860346
+      internalID: -1389354496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_88
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 0
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baae9f9ca12c24b4bb26e3f49462c21f
+      internalID: 1947611467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_89
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 0
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a57a7dcb6e03af4eba115325d4d3ead
+      internalID: 1635108185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_90
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 0
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2cf525d32dbba34b93812a44d0dce77
+      internalID: 793136241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_91
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 0
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e10ba23e30fbf1c4586d0df6aad45d21
+      internalID: 678311262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_92
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 0
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 113ca3726cd18644f89d1d5aa148d632
+      internalID: 1144358794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_93
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 0
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e20966850a1ce8419162760c3c7bed2
+      internalID: 1971195315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_94
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 0
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3d8dec662f090c478e85b88313179fe
+      internalID: 856713097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngfind.com-cat-sprite-png-5037504_95
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 0
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a272864262986349adceff24f4fab1a
+      internalID: -1674764567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      pngfind.com-cat-sprite-png-5037504_5: 1784906159
+      pngfind.com-cat-sprite-png-5037504_55: 143727838
+      pngfind.com-cat-sprite-png-5037504_9: 1085442411
+      pngfind.com-cat-sprite-png-5037504_47: -1251275687
+      pngfind.com-cat-sprite-png-5037504_74: 2075728091
+      pngfind.com-cat-sprite-png-5037504_54: -276924281
+      pngfind.com-cat-sprite-png-5037504_69: -396718817
+      pngfind.com-cat-sprite-png-5037504_13: 1493253543
+      pngfind.com-cat-sprite-png-5037504_10: 755799084
+      pngfind.com-cat-sprite-png-5037504_24: -1304453910
+      pngfind.com-cat-sprite-png-5037504_60: 1120163382
+      pngfind.com-cat-sprite-png-5037504_81: 929099524
+      pngfind.com-cat-sprite-png-5037504_85: -1676183650
+      pngfind.com-cat-sprite-png-5037504_39: 920276885
+      pngfind.com-cat-sprite-png-5037504_20: -57168876
+      pngfind.com-cat-sprite-png-5037504_41: -1320827710
+      pngfind.com-cat-sprite-png-5037504_71: -237303841
+      pngfind.com-cat-sprite-png-5037504_27: 341085731
+      pngfind.com-cat-sprite-png-5037504_78: 1653233889
+      pngfind.com-cat-sprite-png-5037504_14: -13458713
+      pngfind.com-cat-sprite-png-5037504_11: -878383094
+      pngfind.com-cat-sprite-png-5037504_83: 1473358243
+      pngfind.com-cat-sprite-png-5037504_31: -928769360
+      pngfind.com-cat-sprite-png-5037504_80: -256384772
+      pngfind.com-cat-sprite-png-5037504_40: -1418695417
+      pngfind.com-cat-sprite-png-5037504_51: -323660456
+      pngfind.com-cat-sprite-png-5037504_12: 45360998
+      pngfind.com-cat-sprite-png-5037504_3: 1253470139
+      pngfind.com-cat-sprite-png-5037504_89: 1635108185
+      pngfind.com-cat-sprite-png-5037504_88: 1947611467
+      pngfind.com-cat-sprite-png-5037504_87: -1389354496
+      pngfind.com-cat-sprite-png-5037504_1: -2057410208
+      pngfind.com-cat-sprite-png-5037504_23: -396853358
+      pngfind.com-cat-sprite-png-5037504_38: -581493972
+      pngfind.com-cat-sprite-png-5037504_34: -47487720
+      pngfind.com-cat-sprite-png-5037504_15: -2107123505
+      pngfind.com-cat-sprite-png-5037504_84: 1568490037
+      pngfind.com-cat-sprite-png-5037504_46: -1176956953
+      pngfind.com-cat-sprite-png-5037504_86: 1502928292
+      pngfind.com-cat-sprite-png-5037504_53: 454827693
+      pngfind.com-cat-sprite-png-5037504_91: 678311262
+      pngfind.com-cat-sprite-png-5037504_28: -1232521220
+      pngfind.com-cat-sprite-png-5037504_73: -1420124609
+      pngfind.com-cat-sprite-png-5037504_93: 1971195315
+      pngfind.com-cat-sprite-png-5037504_65: 1060816791
+      pngfind.com-cat-sprite-png-5037504_32: -94278890
+      pngfind.com-cat-sprite-png-5037504_57: -2015946214
+      pngfind.com-cat-sprite-png-5037504_33: -1479592906
+      pngfind.com-cat-sprite-png-5037504_94: 856713097
+      pngfind.com-cat-sprite-png-5037504_58: 1191722518
+      pngfind.com-cat-sprite-png-5037504_75: -412620239
+      pngfind.com-cat-sprite-png-5037504_7: -1193733628
+      pngfind.com-cat-sprite-png-5037504_44: 857222890
+      pngfind.com-cat-sprite-png-5037504_49: -2071145816
+      pngfind.com-cat-sprite-png-5037504_4: -1937447057
+      pngfind.com-cat-sprite-png-5037504_68: -1379343272
+      pngfind.com-cat-sprite-png-5037504_82: 868749031
+      pngfind.com-cat-sprite-png-5037504_8: 490236582
+      pngfind.com-cat-sprite-png-5037504_36: -958952691
+      pngfind.com-cat-sprite-png-5037504_42: 181613005
+      pngfind.com-cat-sprite-png-5037504_26: 651555135
+      pngfind.com-cat-sprite-png-5037504_67: -557662177
+      pngfind.com-cat-sprite-png-5037504_92: 1144358794
+      pngfind.com-cat-sprite-png-5037504_22: 523200784
+      pngfind.com-cat-sprite-png-5037504_62: 923909254
+      pngfind.com-cat-sprite-png-5037504_25: 1504913095
+      pngfind.com-cat-sprite-png-5037504_35: -877297268
+      pngfind.com-cat-sprite-png-5037504_45: 1719585983
+      pngfind.com-cat-sprite-png-5037504_72: 1718731953
+      pngfind.com-cat-sprite-png-5037504_6: 50765561
+      pngfind.com-cat-sprite-png-5037504_63: 456271429
+      pngfind.com-cat-sprite-png-5037504_95: -1674764567
+      pngfind.com-cat-sprite-png-5037504_76: 1830881947
+      pngfind.com-cat-sprite-png-5037504_16: -1949382020
+      pngfind.com-cat-sprite-png-5037504_90: 793136241
+      pngfind.com-cat-sprite-png-5037504_0: 637111759
+      pngfind.com-cat-sprite-png-5037504_52: -735692855
+      pngfind.com-cat-sprite-png-5037504_59: 1581358264
+      pngfind.com-cat-sprite-png-5037504_66: 1832400352
+      pngfind.com-cat-sprite-png-5037504_70: -1496343140
+      pngfind.com-cat-sprite-png-5037504_21: 1962404681
+      pngfind.com-cat-sprite-png-5037504_19: 764197616
+      pngfind.com-cat-sprite-png-5037504_50: -2124257920
+      pngfind.com-cat-sprite-png-5037504_29: -290578108
+      pngfind.com-cat-sprite-png-5037504_56: 636020125
+      pngfind.com-cat-sprite-png-5037504_30: 1408227555
+      pngfind.com-cat-sprite-png-5037504_61: -508642922
+      pngfind.com-cat-sprite-png-5037504_64: -820584030
+      pngfind.com-cat-sprite-png-5037504_79: 1314376334
+      pngfind.com-cat-sprite-png-5037504_43: 994009969
+      pngfind.com-cat-sprite-png-5037504_77: 1247708288
+      pngfind.com-cat-sprite-png-5037504_2: 1444499317
+      pngfind.com-cat-sprite-png-5037504_18: -1251530357
+      pngfind.com-cat-sprite-png-5037504_17: -747492211
+      pngfind.com-cat-sprite-png-5037504_37: 2027527341
+      pngfind.com-cat-sprite-png-5037504_48: 1857488540
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
