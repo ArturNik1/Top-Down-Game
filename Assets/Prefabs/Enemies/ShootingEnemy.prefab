@@ -201,7 +201,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Doctor:'
+  m_text: Doctor
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
@@ -433,6 +433,7 @@ MonoBehaviour:
   distributionRate: 20
   waveManager: {fileID: 0}
   paused: 0
+  beingAttacked: 0
   bullet: {fileID: 6584385199562840874, guid: e4effec280d4ca346a0734bb4746c7f4, type: 3}
   defaultShootTime: 4
 --- !u!1001 &5250804310608633839
