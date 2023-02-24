@@ -145,6 +145,8 @@ public abstract class Enemy : MonoBehaviour
     {
 
             level = (int)Mathf.Ceil(currentWave / levelingRatio);
+            if(level <= 0)
+                level = 1;
             maxHealth += Mathf.FloorToInt(0.045f * currentWave * maxHealth);
             health = maxHealth;
             hitAmount += Mathf.FloorToInt(0.075f * currentWave * hitAmount);

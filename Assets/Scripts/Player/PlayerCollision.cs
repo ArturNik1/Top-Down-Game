@@ -57,7 +57,7 @@ public class PlayerCollision : MonoBehaviour
         {
             // push back
             isHit = true;
-            AudioManager.instance.Play("hit1");
+            AudioManager.instance.Play("hit2");
             hitDirection = transform.position - collision.transform.position;
             hitDirection.Normalize();
             currentHitTime = 0;
@@ -93,7 +93,7 @@ public class PlayerCollision : MonoBehaviour
 
     public void HitByExplosion(ExplodingEnemy explodingEnemy) {
         isHit = true;
-        AudioManager.instance.Play("hit1");
+        AudioManager.instance.Play("hit2");
         currentHitTime = 0;
         playerInfo.reduceHealth(explodingEnemy.hitAmount);
 

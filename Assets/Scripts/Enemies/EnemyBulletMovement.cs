@@ -9,7 +9,7 @@ public class EnemyBulletMovement : MonoBehaviour
     private GameObject player;
     public float bulletSpeed;
     public int hitAmount;
-
+    public float bulletLifeTime = 3;
     private bool paused = false;
 
     // Start is called before the first frame update
@@ -21,6 +21,7 @@ public class EnemyBulletMovement : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+        Destroy(gameObject, bulletLifeTime);
         Vector3 rand = new Vector3(Random.value - 0.5f, Random.value - 0.5f, 0);
         bulletDirection = player.transform.position - transform.position + rand;
         float angle = Mathf.Atan2(bulletDirection.y, bulletDirection.x) * Mathf.Rad2Deg;
