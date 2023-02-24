@@ -53,7 +53,7 @@ public class UIManager : MonoBehaviour
 
         playerStats = GameObject.Find("Player").GetComponent<PlayerStats>();
         levelManager = GameObject.Find("Level Manager").GetComponent<LevelManager>();
-        itemManager = GameObject.Find("Item Spawn Manager").GetComponent<ItemManager>();
+        if (GameObject.Find("Item Spawn Manager") != null) itemManager = GameObject.Find("Item Spawn Manager").GetComponent<ItemManager>();
     }
 
     private void Update()

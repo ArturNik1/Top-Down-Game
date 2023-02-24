@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerCombat : MonoBehaviour
 {
@@ -36,7 +37,7 @@ public class PlayerCombat : MonoBehaviour
     {
         if (playerMovement.paused) return;
         if (Input.GetKeyDown(KeyCode.Space) && !isAttacking) {
-            if (MeleeAttack())
+            if (MeleeAttack() && SceneManager.GetActiveScene().name != "FirstStart")
             {
                 // if hit something, update combo
                 playerStats.UpdateCombo();
@@ -69,6 +70,7 @@ public class PlayerCombat : MonoBehaviour
         {
             enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
         }
+
         return hitEnemies.Length > 0;
     }
 
