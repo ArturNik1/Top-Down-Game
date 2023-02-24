@@ -25,7 +25,8 @@ public abstract class Enemy : MonoBehaviour
     public int maxHealth;
     public int health;
     public HealthBar healthBar;
-
+    private float previousPositionX;
+    private SpriteRenderer spriteRenderer;
     [Header("Speed Settings")]
     public float speed;
     public float knockbackSpeed = 5.0f;
@@ -49,10 +50,13 @@ public abstract class Enemy : MonoBehaviour
     [HideInInspector]
     public bool beingAttacked = false;
 
+    private bool isHitted = false;
+
     // Start is called before the first frame update
     protected void Start()
     {
         if (beingAttacked) beingAttacked = false;
+        spriteRenderer = GetComponent<SpriteRenderer>();
 
         health = maxHealth;
         player = GameObject.Find("Player");
@@ -73,6 +77,7 @@ public abstract class Enemy : MonoBehaviour
     public virtual void Update()
     {
         healthBar.SetHealth(health);
+        AnimationDir();
     }
 
     public void TakeDamage(int damage) {
@@ -82,6 +87,7 @@ public abstract class Enemy : MonoBehaviour
         hitDirection = transform.position - player.transform.position;
         hitDirection.Normalize();
         rigidbody.velocity = hitDirection * knockbackSpeed;
+        StartCoroutine(SetBoolTrueForOneSecond());
 
         //play hurt animation
         if (health <= 0) {
@@ -90,6 +96,30 @@ public abstract class Enemy : MonoBehaviour
         }
 
            
+    }
+
+    IEnumerator SetBoolTrueForOneSecond()
+    {
+        isHitted = true;
+        yield return new WaitForSeconds(1);
+        isHitted = false;
+    }
+
+    public void AnimationDir() {
+        float currentPositionX = transform.position.x;
+
+        if (currentPositionX > previousPositionX && !isHitted)
+        {
+            spriteRenderer.flipX = false;
+        }
+        else if (currentPositionX < previousPositionX && !isHitted)
+        {
+            spriteRenderer.flipX = true;
+        }
+
+        // Update the previous position to the current position
+        previousPositionX = currentPositionX;
+
     }
 
     public virtual void DropItemByChance() {

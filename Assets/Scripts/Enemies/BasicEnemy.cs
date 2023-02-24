@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class BasicEnemy : Enemy
 {
+
+
+
     // Start is called before the first frame update
     new void Start()
     {
@@ -16,6 +19,8 @@ public class BasicEnemy : Enemy
         if (paused) return;
         base.Update();
         Move();
+
+
     }
 
     public override void Move()
@@ -24,6 +29,7 @@ public class BasicEnemy : Enemy
 
         float step = speed * Time.deltaTime;
         transform.position = Vector2.MoveTowards(transform.position, player.transform.position, step);
+
     }
 
     public override void Die()
