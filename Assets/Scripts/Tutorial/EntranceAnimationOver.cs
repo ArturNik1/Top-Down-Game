@@ -6,6 +6,8 @@ public class EntranceAnimationOver : MonoBehaviour
 {
     public TutorialManager tutorialManager;
     public GameObject leftWall;
+    public RuntimeAnimatorController playerController;
+    public Animator playerAnimator;
 
     public void ChangeLeftWall()
     {
@@ -16,6 +18,8 @@ public class EntranceAnimationOver : MonoBehaviour
         ChangeLeftWall();
         tutorialManager.animationIsDone = true;
         GetComponent<Animator>().enabled = false;
+        playerAnimator.runtimeAnimatorController = playerController;
+
     }
 
 }

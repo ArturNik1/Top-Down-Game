@@ -46,9 +46,14 @@ public abstract class Enemy : MonoBehaviour
     [HideInInspector]
     public bool paused = false;
 
+    [HideInInspector]
+    public bool beingAttacked = false;
+
     // Start is called before the first frame update
     protected void Start()
     {
+        if (beingAttacked) beingAttacked = false;
+
         health = maxHealth;
         player = GameObject.Find("Player");
         waveManager = GameObject.FindGameObjectWithTag("WaveManager");
@@ -71,6 +76,7 @@ public abstract class Enemy : MonoBehaviour
     }
 
     public void TakeDamage(int damage) {
+        beingAttacked = true;
         health -= damage;
         playerStats.damageDealt += damage;
         hitDirection = transform.position - player.transform.position;
