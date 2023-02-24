@@ -78,16 +78,19 @@ public class PlayerCombat : MonoBehaviour
         if (attack_animation == 1) {
             animator.ResetTrigger("MeleeAttack1");
             animator.SetTrigger("MeleeAttack1");
+            AudioManager.instance.Play("sword_whoosh1");
         }
         else if (attack_animation == 2)
         {
             animator.ResetTrigger("MeleeAttack2");
             animator.SetTrigger("MeleeAttack2");
+            AudioManager.instance.Play("sword_whoosh2");
         }
         else if (attack_animation == 3)
         {
             animator.ResetTrigger("MeleeAttack3");
             animator.SetTrigger("MeleeAttack3");
+            AudioManager.instance.Play("sword_whoosh3");
         }
         
         attack_animation++;

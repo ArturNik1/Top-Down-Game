@@ -41,7 +41,7 @@ public class PlayerCollision : MonoBehaviour
         if (collision.transform.tag == "Enemy") {
             // push back
             isHit = true;
-            AudioManager.instance.Play("hit1");
+            AudioManager.instance.Play("hit2");
             //hit animations
             animator.ResetTrigger("Hurt");
             animator.SetTrigger("Hurt");
