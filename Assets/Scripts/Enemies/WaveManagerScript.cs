@@ -26,6 +26,7 @@ public class WaveManagerScript : MonoBehaviour
     private GameObject player;
     private PlayerStats playerStats;
     private UIManager uiManager;
+    private ItemManager itemManager;
 
     private bool paused = false;
     void Start()
@@ -40,6 +41,8 @@ public class WaveManagerScript : MonoBehaviour
         currentWave = startingWave;
         timer = 0f;
         waveActive = false;
+
+        itemManager = GameObject.Find("Item Spawn Manager").GetComponent<ItemManager>();
     }
 
     void Update()
@@ -64,6 +67,8 @@ public class WaveManagerScript : MonoBehaviour
             waveSlider.value = 0f;
 
             spawnTimer = 0f;
+
+            itemManager.SpawnItemsOnMap();
 
             // pause game and open wave panel.
             if (currentWave > 1) uiManager.OpenWavePrizePanel();

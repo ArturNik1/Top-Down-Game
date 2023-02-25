@@ -20,7 +20,6 @@ public class ItemManager : MonoBehaviour
     void Start()
     {
         AddPowerUpsToStoreList();
-        SpawnItemsOnMap();
     }
 
     public void AddPowerUpsToStoreList() {
@@ -39,7 +38,7 @@ public class ItemManager : MonoBehaviour
                 combinedPowerUps[i] = powerUps[i];
             }
             for (; i < combinedPowerUps.Length; i++) {
-                string path = "Assets/Prefabs/Items/Power Ups/" + storeItems[i - powerUps.Length].prefabName + ".prefab";
+                string path = "Assets/Prefabs/Items/Store Items/" + storeItems[i - powerUps.Length].prefabName + ".prefab";
                 combinedPowerUps[i] = AssetDatabase.LoadAssetAtPath<GameObject>(path);
             }
 
@@ -48,24 +47,22 @@ public class ItemManager : MonoBehaviour
     }
 
     public void SpawnItemsOnMap() {
-        Vector3[] randomLocations = (Vector3[])spawnLocationsArray.Clone();
-        ShuffleArray(randomLocations);
-        int currentIndex = 0;
-
-        for (int i = 0; i < powerUpsToSpawn && currentIndex < randomLocations.Length && powerUps.Length > 0; i++) {
+        for (int i = 0; i < powerUpsToSpawn && powerUps.Length > 0; i++) {
             int r = UnityEngine.Random.Range(0, powerUps.Length);
+            float x = UnityEngine.Random.Range(spawnLocationsArray[0].x, spawnLocationsArray[1].x);
+            float y = UnityEngine.Random.Range(spawnLocationsArray[1].y, spawnLocationsArray[0].y);
             GameObject obj = Instantiate(powerUps[r]);
-            obj.transform.position = randomLocations[currentIndex];
+            obj.transform.position = new Vector3(x, y, 0);
             obj.transform.GetComponent<Item>().UpdateY_Start();
-            currentIndex++;
         }
 
-        for (int i = 0; i < weaponsToSpawn && currentIndex < randomLocations.Length && weapons.Length > 0; i++) {
+        for (int i = 0; i < weaponsToSpawn && weapons.Length > 0; i++) {
             int r = UnityEngine.Random.Range(0, weapons.Length);
+            float x = UnityEngine.Random.Range(spawnLocationsArray[0].x, spawnLocationsArray[1].x);
+            float y = UnityEngine.Random.Range(spawnLocationsArray[1].y, spawnLocationsArray[0].y);
             GameObject obj = Instantiate(weapons[r]);
-            obj.transform.position = randomLocations[currentIndex];
+            obj.transform.position = new Vector3(x, y, 0);
             obj.transform.GetComponent<Item>().UpdateY_Start(); 
-            currentIndex++;
         }
     }
 

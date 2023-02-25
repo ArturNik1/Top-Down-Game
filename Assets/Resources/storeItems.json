@@ -1,37 +1,30 @@
 [
   {
-    "prefabName": "PowerUP_MaxHealth",
-    "itemName": "Temp one",
-    "itemDescription": "This is a place holder....",
-    "price": 10000,
-    "purchased": true
-  },
-  {
-    "prefabName": "PowerUP_MaxHealth",
-    "itemName": "Choices",
-    "itemDescription": "Choose a power up at the start of the round!",
-    "price": 1000,
-    "purchased": true
-  },
-  {
     "prefabName": "PowerUP_Speed",
-    "itemName": "Temp two",
-    "itemDescription": "This is a place holder....",
-    "price": 70657,
+    "itemName": "Buy Speed!",
+    "itemDescription": "You can run faster without even exercising!!",
+    "price": 100,
     "purchased": true
   },
   {
-    "prefabName": "PowerUP_AttackDamage",
-    "itemName": "Temp three",
-    "itemDescription": "This is a place holder....",
-    "price": 604368,
+    "prefabName": "PowerUP_AttackSpeed",
+    "itemName": "More Speed?",
+    "itemDescription": "Improve your attack speed!",
+    "price": 250,
     "purchased": true
   },
   {
-    "prefabName": "PowerUP_AttackDamage",
-    "itemName": "Temp four",
-    "itemDescription": "This is a place holder....",
-    "price": 1000000,
+    "prefabName": "PowerUP_ItemDropRate",
+    "itemName": "I swear I am worth it!",
+    "itemDescription": "Buy me for increased item drop rate!",
+    "price": 2000,
+    "purchased": true
+  },
+  {
+    "prefabName": "PowerUP_AttackRange",
+    "itemName": "Reach Further!",
+    "itemDescription": "Improve your attack range with this technology!",
+    "price": 250,
     "purchased": true
   }
 ]

@@ -65,6 +65,7 @@ public class TutorialManager : MonoBehaviour
                     //  Spawn an item.
                     else {
                         Instantiate(dummyItem, Vector3.zero, Quaternion.identity);
+                        AudioManager.instance.Play("cartoon_bang");
                     }
                 }
                 else if (currentCase == WaitScenarios.AnyInput) {
@@ -124,7 +125,7 @@ public class TutorialManager : MonoBehaviour
 
             infoText.color = firstColor;
 
-            string targetText = "I CAN'T BELIVE I HAVE SURVIVED AND\nREACHED THE THIRD YEAR...";
+            string targetText = "I CAN'T BELIEVE I HAVE SURVIVED AND\nREACHED THE THIRD YEAR...";
             infoText.text = "";
             for (int i = 0; i < targetText.Length; i++) {
                 infoText.text = infoText.text + targetText[i];

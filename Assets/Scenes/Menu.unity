@@ -2457,7 +2457,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
+  m_fontSize: 19.8
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2557,7 +2557,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 253925912547439422, guid: 7c53f4fe49a85084db53795811863f18, type: 3}
       propertyPath: sounds.Array.size
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 253925912547439422, guid: 7c53f4fe49a85084db53795811863f18, type: 3}
       propertyPath: sounds.Array.data[0].clip
@@ -2596,6 +2596,14 @@ PrefabInstance:
       value: hit2
       objectReference: {fileID: 0}
     - target: {fileID: 253925912547439422, guid: 7c53f4fe49a85084db53795811863f18, type: 3}
+      propertyPath: sounds.Array.data[6].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6199e32211c40fe4f82200fce49e731f, type: 3}
+    - target: {fileID: 253925912547439422, guid: 7c53f4fe49a85084db53795811863f18, type: 3}
+      propertyPath: sounds.Array.data[6].name
+      value: cartoon_bang
+      objectReference: {fileID: 0}
+    - target: {fileID: 253925912547439422, guid: 7c53f4fe49a85084db53795811863f18, type: 3}
       propertyPath: sounds.Array.data[2].pitch
       value: 1
       objectReference: {fileID: 0}
@@ -2612,6 +2620,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 253925912547439422, guid: 7c53f4fe49a85084db53795811863f18, type: 3}
+      propertyPath: sounds.Array.data[6].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 253925912547439422, guid: 7c53f4fe49a85084db53795811863f18, type: 3}
       propertyPath: sounds.Array.data[2].volume
       value: 0.705
       objectReference: {fileID: 0}
@@ -2625,6 +2637,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 253925912547439422, guid: 7c53f4fe49a85084db53795811863f18, type: 3}
       propertyPath: sounds.Array.data[5].volume
+      value: 0.71
+      objectReference: {fileID: 0}
+    - target: {fileID: 253925912547439422, guid: 7c53f4fe49a85084db53795811863f18, type: 3}
+      propertyPath: sounds.Array.data[6].volume
       value: 0.71
       objectReference: {fileID: 0}
     - target: {fileID: 253925912547439423, guid: 7c53f4fe49a85084db53795811863f18, type: 3}
@@ -2782,35 +2798,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resetFile: 0
   storeItemSetup:
-  - prefabName: PowerUP_MaxHealth
-    itemName: Choices
-    itemDescription: Choose a power up at the start of the round!
-    price: 1000
-    purchased: 0
-  - prefabName: PowerUP_MaxHealth
-    itemName: Temp one
-    itemDescription: This is a place holder....
-    price: 10000
-    purchased: 0
   - prefabName: PowerUP_Speed
-    itemName: Temp two
-    itemDescription: This is a place holder....
-    price: 70657
+    itemName: Buy Speed!
+    itemDescription: You can run faster without even exercising!!
+    price: 100
     purchased: 0
-  - prefabName: PowerUP_AttackDamage
-    itemName: Temp three
-    itemDescription: This is a place holder....
-    price: 604368
+  - prefabName: PowerUP_AttackRange
+    itemName: Reach Further!
+    itemDescription: Improve your attack range with this technology!
+    price: 250
     purchased: 0
-  - prefabName: PowerUP_AttackDamage
-    itemName: Temp four
-    itemDescription: This is a place holder....
-    price: 1000000
+  - prefabName: PowerUP_AttackSpeed
+    itemName: More Speed?
+    itemDescription: Improve your attack speed!
+    price: 250
     purchased: 0
-  - prefabName: PowerUP_AttackDamage
-    itemName: Temp five
-    itemDescription: This is a place holder....
-    price: 2147483647
+  - prefabName: PowerUP_ItemDropRate
+    itemName: I swear I am worth it!
+    itemDescription: Buy me for increased item drop rate!
+    price: 2000
     purchased: 0
   storeItemButton: {fileID: 9155706812349550269, guid: 464d5671a8182574cb9142d159b36412, type: 3}
   contentGameObject: {fileID: 670553646}
@@ -2914,7 +2920,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
+  m_fontSize: 20.65
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -5523,7 +5529,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
+  m_fontSize: 20.65
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -5787,7 +5793,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
+  m_fontSize: 19.6
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -6283,7 +6289,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
+  m_fontSize: 19.45
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
