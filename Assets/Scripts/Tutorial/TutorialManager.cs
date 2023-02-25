@@ -17,6 +17,9 @@ public class TutorialManager : MonoBehaviour
     public GameObject dummyItem;
     public GameObject wall;
 
+    private Color firstColor;
+    private Color regularColor;
+
     private WaitScenarios currentCase = WaitScenarios.NotWaiting;
     private int alphaTarget = 1;
     private bool stopOnNextIteration = false;
@@ -31,12 +34,18 @@ public class TutorialManager : MonoBehaviour
 
     private void Start()
     {
+        firstColor = new Color(50f / 255f, 50f / 255f, 50f / 255f, 1);
+        regularColor = new Color(183f / 255f, 217f / 255f, 192f / 255f, 1);
+
         StartCoroutine(HandleStartScene());
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        if (!animationIsDone) return;
+
         infoText.alpha = Mathf.MoveTowards(infoText.alpha, alphaTarget, 0.5f * Time.deltaTime);
 
         if (infoText.alpha == 1) {
@@ -111,8 +120,39 @@ public class TutorialManager : MonoBehaviour
     IEnumerator HandleStartScene() {
         // If AnimationClip is done:
         //  Enable player movement
-        while (!animationIsDone)
+        while (!animationIsDone) {
+
+            infoText.color = firstColor;
+
+            string targetText = "I CAN'T BELIVE I HAVE SURVIVED AND\nREACHED THE THIRD YEAR...";
+            infoText.text = "";
+            for (int i = 0; i < targetText.Length; i++) {
+                infoText.text = infoText.text + targetText[i];
+                yield return new WaitForSeconds(0.1f);
+            }
+            yield return new WaitForSeconds(0.5f);
+
+            targetText = "EVEN THE CATS ARE NOT LOOKING AT ME\nARROGANTLY ANYMORE";
+            infoText.text = "";
+            for (int i = 0; i < targetText.Length; i++) {
+                infoText.text = infoText.text + targetText[i];
+                yield return new WaitForSeconds(0.1f);
+            }
+            yield return new WaitForSeconds(0.5f);
+
+            targetText = "WELL... THIRD YEAR... HERE I COME\nI AM SURE IT WON'T BE EASY...";
+            infoText.text = "";
+            for (int i = 0; i < targetText.Length; i++) {
+                infoText.text = infoText.text + targetText[i];
+                yield return new WaitForSeconds(0.1f);
+            }
+            yield return new WaitForSeconds(0.5f);
+
+
             yield return new WaitForEndOfFrame();
+        }
+
+        infoText.color = regularColor;
 
         //  Have an on-screen message for movement buttons and wait for input, once you get the input fade out the message.
         HandleOnScreenText("Press W A S D To Move...");
