@@ -38,8 +38,9 @@ public class ItemManager : MonoBehaviour
                 combinedPowerUps[i] = powerUps[i];
             }
             for (; i < combinedPowerUps.Length; i++) {
-                string path = "Assets/Prefabs/Items/Store Items/" + storeItems[i - powerUps.Length].prefabName + ".prefab";
-                combinedPowerUps[i] = AssetDatabase.LoadAssetAtPath<GameObject>(path);
+                string path = "Prefabs/Items/Store Items/" + storeItems[i - powerUps.Length].prefabName;
+                //combinedPowerUps[i] = AssetDatabase.LoadAssetAtPath<GameObject>(path);
+                combinedPowerUps[i] = (GameObject)Resources.Load(path);
             }
 
             powerUps = combinedPowerUps;

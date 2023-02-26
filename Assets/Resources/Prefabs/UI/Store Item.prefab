@@ -261,10 +261,10 @@ RectTransform:
   m_Father: {fileID: 875003351032546074}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.068, y: 0.21411088}
-  m_AnchorMax: {x: 0.93200004, y: 0.7925568}
-  m_AnchoredPosition: {x: -0.0016021729, y: -0.48999023}
-  m_SizeDelta: {x: 0.7482996, y: 0.598999}
+  m_AnchorMin: {x: 0.09518252, y: 0.23688805}
+  m_AnchorMax: {x: 0.89800006, y: 0.7652243}
+  m_AnchoredPosition: {x: 0.49840164, y: 0.010009766}
+  m_SizeDelta: {x: -1.6688004, y: 0.18190002}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1656434097
 CanvasRenderer:
@@ -774,8 +774,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   storeItem:
+    prefabName: 
     itemName: 
     itemDescription: 
     price: 0
     purchased: 0
-  wait: 0
