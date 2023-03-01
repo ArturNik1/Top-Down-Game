@@ -33,7 +33,7 @@ public class AchievementButton : MonoBehaviour
             achievementHandler.WriteDataToFile();
 
             // add to coins
-            PlayerPrefs.SetInt("coins", PlayerPrefs.GetInt("coins", 0) + (int)Mathf.Pow(10, 1 + achievement.currentStar));
+            PlayerPrefs.SetInt("coins", PlayerPrefs.GetInt("coins", 0) + (10 * achievement.currentStar));
             GameObject.Find("Canvas").GetComponent<MainMenuManager>().coinsText.text = "Coins: " + PlayerPrefs.GetInt("coins", 0);
 
         });
